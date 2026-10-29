@@ -16,5 +16,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # The lockfile is written on Windows, and npm drops rollup's Linux binary
+      # from it (npm/cli#4828): install the one matching the locked rollup.
+      - run: npm install --no-save "@rollup/rollup-linux-x64-gnu@$(node -p "require('rollup/package.json').version")"
       - run: npx tsc --noEmit -p tsconfig.json
       - run: npm test
