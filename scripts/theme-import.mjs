@@ -206,8 +206,10 @@ function tokensFrom({ ground, surface, card, line, text, accent, success, warnin
     '--radius-sm': radius.sm,
     '--radius-md': radius.md,
     '--radius-lg': radius.lg,
-    '--border-subtle': `${border} solid ${line}`,
-    '--border-accent': `${border} solid ${rgba(a, 0.45)}`,
+    // Border tokens are COLOURS, as in the Mnemosyne OS host: an element writes
+    // `1px solid var(--border-subtle)`, so a cartridge's host theme can recolour it.
+    '--border-subtle': line,
+    '--border-accent': rgba(a, 0.45),
     '--shadow-card': shadow,
     '--shadow-accent': `0 0 22px -6px ${rgba(a, 0.5)}`,
     '--transition-fast': '120ms ease',

@@ -1,7 +1,7 @@
 .ss-badge-count {
   position: relative; display: inline-flex; align-items: center;
   padding: var(--space-sm) var(--space-md);
-  border: var(--border-subtle); border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
   background: var(--bg-panel); color: var(--text-primary);
   font: 500 14px/1 var(--font-ui);
 }

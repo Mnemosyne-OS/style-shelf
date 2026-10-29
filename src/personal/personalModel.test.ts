@@ -3,7 +3,7 @@ import type { StyleEntry } from '../catalog/types';
 import { contrastIssues, contrastRatio } from '../lib/contrast';
 import { toRestore } from './personalMirror';
 import {
-  checkPersonal, createPersonal, exportSkin, importSkin, parseStored, personalId, serialize, setToken, slugify, toEntry, toManifest, upsert,
+  bordersAsColours, checkPersonal, createPersonal, exportSkin, importSkin, parseStored, personalId, serialize, setToken, slugify, toEntry, toManifest, upsert,
 } from './personalModel';
 
 const night: StyleEntry = {
@@ -120,5 +120,15 @@ describe('contrast', () => {
     const ok = { '--text-primary': '#000000', '--text-muted': '#000000', '--text-accent': '#000000', '--bg-void': '#ffffff' };
     expect(contrastIssues({ ...ok, '--accent': '#000000' })).toEqual([]);
     expect(contrastIssues({ ...ok, '--accent': '#f5f5f5' })).toEqual([{ pair: 'onAccent', ratio: expect.closeTo(1.09, 2) }]);
+  });
+
+  it('turns a border written whole into its colour, in a stored style and in an imported skin', () => {
+    expect(bordersAsColours({ '--border-subtle': '1px solid rgba(1, 2, 3, 0.5)', '--border-accent': '2px dashed #abc', '--accent': '#fff' }))
+      .toEqual({ '--border-subtle': 'rgba(1, 2, 3, 0.5)', '--border-accent': '#abc', '--accent': '#fff' });
+    const stored = JSON.stringify([{ ...createPersonal(night, 'Old', new Set(), AT), tokens: { ...night.manifest.tokens, '--border-subtle': '1px solid #222222' } }]);
+    expect(parseStored(stored).styles[0].tokens['--border-subtle']).toBe('#222222');
+    const skin = JSON.stringify({ id: 'x', name: 'X', version: '1', tokens: { '--border-accent': '1px solid #ff0000' } });
+    const got = importSkin(skin, night, new Set(), AT);
+    expect('error' in got ? got.error : got.tokens['--border-accent']).toBe('#ff0000');
   });
 });

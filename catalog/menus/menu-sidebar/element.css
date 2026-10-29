@@ -1,6 +1,6 @@
 .ss-menu-sidebar {
   width: 200px; padding: var(--space-sm);
-  border: var(--border-subtle); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
   background: var(--bg-surface); font-family: var(--font-ui);
 }
 .ss-menu-sidebar__title { margin: 4px 10px 8px; font: 11px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }

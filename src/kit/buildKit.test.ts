@@ -48,6 +48,12 @@ describe('buildKit', () => {
     expect(css.indexOf('btn-a')).toBeLessThan(css.indexOf('spin'));
   });
 
+  it('tells the agent how a Mnemosyne OS cartridge takes the host theme', () => {
+    const built = buildKit({ styleId: 'night', itemIds: [] }, catalog, AT);
+    if (!built.ok) throw new Error('not built');
+    expect(built.files[3].content).toContain('call `onHostConfig()` from `@mnemosyne_os/cartridge-sdk`');
+  });
+
   it('the brief points at the files on disk, and carries them inside when copied', () => {
     const built = buildKit({ styleId: 'night', itemIds: ['btn-a', 'lucide'] }, catalog, AT);
     if (!built.ok) throw new Error('not built');

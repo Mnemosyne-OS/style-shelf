@@ -1,7 +1,7 @@
 .ss-btn-ghost {
   font: 600 14px/1 var(--font-ui);
   padding: var(--space-sm) var(--space-lg);
-  border: var(--border-accent);
+  border: 1px solid var(--border-accent);
   border-radius: var(--radius-md);
   background: transparent;
   color: var(--text-accent);

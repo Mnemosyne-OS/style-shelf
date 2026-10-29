@@ -1,4 +1,4 @@
-.ss-segmented { display: inline-flex; padding: 3px; gap: 3px; border: var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-panel); font: 13px/1 var(--font-ui); }
+.ss-segmented { display: inline-flex; padding: 3px; gap: 3px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-panel); font: 13px/1 var(--font-ui); }
 .ss-segmented__input { position: absolute; opacity: 0; pointer-events: none; }
 .ss-segmented__option {
   padding: 8px 14px;

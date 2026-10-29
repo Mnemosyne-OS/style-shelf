@@ -1,0 +1,55 @@
+{
+  "id": "mnemosyne-tokyo-night",
+  "kind": "style",
+  "title": {
+    "en": "Mnemosyne OS Tokyo Night",
+    "fr": "Mnemosyne OS Tokyo Night",
+    "es": "Mnemosyne OS Tokyo Night"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "dark",
+    "mnemosyne-os"
+  ],
+  "manifest": {
+    "id": "mnemosyne-tokyo-night",
+    "name": "Mnemosyne OS Tokyo Night",
+    "version": "1.0.0",
+    "author": "Mnemosyne OS",
+    "description": "The Mnemosyne OS theme \"tokyo-night\", read from the host's globals.css. Translucent text and ground colours are flattened over the page ground for this preview; inside a cartridge the kit reads the host's live variables. Palette ported by the host from Tokyo Night by Enkia (MIT).",
+    "tokens": {
+      "--accent": "#7aa2f7",
+      "--accent-dim": "#6282c6",
+      "--accent-glow": "color-mix(in srgb, #7aa2f7 16%, transparent)",
+      "--accent-border": "rgba(122, 162, 247, 0.45)",
+      "--bg-void": "#1a1b26",
+      "--bg-surface": "#21232f",
+      "--bg-panel": "#16161e",
+      "--bg-card": "#16161e",
+      "--bg-hover": "rgba(169, 177, 214, 0.09)",
+      "--text-primary": "#c0caf5",
+      "--text-secondary": "#a9b1d6",
+      "--text-muted": "#828bb8",
+      "--text-accent": "#7aa2f7",
+      "--font-ui": "'Inter', -apple-system, system-ui, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, 'Roboto Mono', monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "6px",
+      "--radius-md": "10px",
+      "--radius-lg": "16px",
+      "--border-subtle": "rgba(65, 72, 104, 0.55)",
+      "--border-accent": "rgba(122, 162, 247, 0.5)",
+      "--shadow-card": "0 0 0 1px rgba(65, 72, 104, 0.35), 0 8px 32px rgba(0, 0, 0, 0.6)",
+      "--shadow-accent": "0 0 22px -6px rgba(122, 162, 247, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#9ece6a",
+      "--status-warning": "#e0af68",
+      "--status-overload": "#f7768e"
+    }
+  }
+}

@@ -3,7 +3,7 @@
   display: flex; align-items: center; gap: var(--space-md);
   width: min(100%, 360px);
   padding: var(--space-md) var(--space-lg);
-  border: var(--border-accent); border-radius: var(--radius-md);
+  border: 1px solid var(--border-accent); border-radius: var(--radius-md);
   background: var(--accent-glow);
   font: 14px/1.4 var(--font-ui); color: var(--text-primary);
 }
@@ -14,6 +14,6 @@
 }
 .ss-alert-banner__text { flex: 1; }
 .ss-alert-banner__action {
-  flex: none; padding: 6px 12px; border: var(--border-accent); border-radius: var(--radius-sm);
+  flex: none; padding: 6px 12px; border: 1px solid var(--border-accent); border-radius: var(--radius-sm);
   background: transparent; color: var(--text-accent); font: 600 12px/1 var(--font-ui); cursor: pointer;
 }

@@ -1,7 +1,7 @@
 .ss-stagger-list { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; width: min(100%, 220px); font: 14px/1.2 var(--font-ui); }
 .ss-stagger-list li {
   padding: 9px 12px;
-  border: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   background: var(--bg-card);
   color: var(--text-primary);

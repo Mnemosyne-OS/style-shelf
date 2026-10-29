@@ -1,6 +1,6 @@
 .ss-table-zebra {
   width: min(100%, 360px); border-collapse: separate; border-spacing: 0;
-  border: var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;
   font: 13px/1.3 var(--font-ui); color: var(--text-primary);
 }
 .ss-table-zebra th {

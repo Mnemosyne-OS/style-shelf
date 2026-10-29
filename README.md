@@ -17,8 +17,10 @@ Open it in your browser: <https://mnemosyne-os.github.io/style-shelf/>
 
 ## What is in the catalogue
 
-- 51 styles. 6 are made for Mnemosyne OS. 35 come from the daisyUI themes and
-  10 from the Skeleton themes, converted to the same 30 design tokens.
+- 55 styles. 4 are the themes of Mnemosyne OS itself: Dark, Light, Tokyo
+  Night and Glass. 6 more are made for Style Shelf. 35 come from the daisyUI
+  themes and 10 from the Skeleton themes, converted to the same 30 design
+  tokens.
 - 36 UI elements: buttons, cards, fields, badges, alerts, tooltips, menus,
   tables, loading skeletons, animations and backgrounds.
 - 4 icon packs: Lucide, Tabler, Phosphor and Heroicons, shown with 8 sample
@@ -73,6 +75,17 @@ request goes through.
 Style Shelf is also a Mnemosyne OS cartridge. Inside Mnemosyne OS it writes
 the kit into your project folder, and your coding agent reads the cart through
 the `cart` action.
+
+## Building an app for Mnemosyne OS
+
+A kit fits a Mnemosyne OS cartridge as it is. Call `onHostConfig()` from
+`@mnemosyne_os/cartridge-sdk` in the entry file of your app. Mnemosyne OS then
+sends the user's theme as CSS variables. `tokens.css` reads those variables
+first and keeps the style's colours as a fallback. Your app takes the theme
+the user picked inside Mnemosyne OS, and the style you picked everywhere else.
+
+Border variables hold a colour, as in Mnemosyne OS. Write the border around
+it: `1px solid var(--border-subtle)`.
 
 ## Licences
 

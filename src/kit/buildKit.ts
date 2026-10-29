@@ -19,7 +19,7 @@
 import type { SkinManifest } from '@mnemosyne_os/design-sdk';
 import type { Cart } from '../cart/cartModel';
 import type { Catalog, ElementEntry, StyleEntry, Tier, Title } from '../catalog/types';
-import { tokensCss } from '../preview/previewDoc';
+import { withHostFallback } from './hostTokens';
 
 /** The folder the kit is written to, inside the project. */
 export const KIT_DIR = 'style-shelf';
@@ -103,8 +103,18 @@ export function buildKit(cart: Cart, catalog: Catalog, createdAt: string): KitBu
   };
 }
 
+/**
+ * The style's variables for the project (doc 186 §20). A token the Mnemosyne OS
+ * host also carries under another name reads the host's variable first, so the
+ * app follows the user's theme inside a cartridge and the style anywhere else.
+ */
+export function kitTokensCss(manifest: SkinManifest): string {
+  const lines = Object.entries(manifest.tokens).map(([k, v]) => `  ${k}: ${withHostFallback(k, String(v))};`);
+  return `:root {\n${lines.join('\n')}\n}`;
+}
+
 function tokensFile(style: StyleEntry): string {
-  return `/* Style Shelf · ${style.title.en} (${style.id}) · ${style.license} · ${style.author} */\n${tokensCss(style.manifest)}\n`;
+  return `/* Style Shelf · ${style.title.en} (${style.id}) · ${style.license} · ${style.author} */\n${kitTokensCss(style.manifest)}\n`;
 }
 
 function elementsFile(elements: KitElement[]): string {
@@ -134,6 +144,7 @@ export function briefMarkdown(kit: Kit, opts: { embedFiles: boolean }): string {
     '3. Keep each `prefers-reduced-motion` rule an element has.',
     '4. Install the icon packs listed with the package for the project\'s framework.',
     '5. Keep the licence notices.',
+    "6. If the project is a Mnemosyne OS cartridge, call `onHostConfig()` from `@mnemosyne_os/cartridge-sdk` in its entry file. The app then takes the user's theme: `tokens.css` already reads the host's variables first. Border variables are colours: write `1px solid var(--border-subtle)`.",
     '',
     '## Style',
     '',
@@ -151,7 +162,7 @@ export function briefMarkdown(kit: Kit, opts: { embedFiles: boolean }): string {
   for (const i of kit.icons) out.push(iconLine(i));
   out.push('', '## Licences', '', kit.licenses.join(', '), '');
   if (opts.embedFiles) {
-    out.push('## tokens.css', '', '```css', tokensCss(style), '```', '', '## elements.css', '', '```css', elementsFile(kit.elements).trimEnd(), '```', '');
+    out.push('## tokens.css', '', '```css', kitTokensCss(style), '```', '', '## elements.css', '', '```css', elementsFile(kit.elements).trimEnd(), '```', '');
   } else {
     out.push('## Files', '', '- `tokens.css`: the variables', '- `elements.css`: the CSS of each element', '- `kit.json`: everything above, as data', '');
   }

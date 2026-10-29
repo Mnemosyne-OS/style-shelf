@@ -8,4 +8,4 @@
   font: 600 12px/1.4 var(--font-ui);
 }
 .ss-badge-soft__item:nth-child(2) { background: var(--bg-hover); color: var(--text-secondary); }
-.ss-badge-soft__item:nth-child(3) { background: var(--bg-surface); color: var(--text-muted); border: var(--border-subtle); }
+.ss-badge-soft__item:nth-child(3) { background: var(--bg-surface); color: var(--text-muted); border: 1px solid var(--border-subtle); }

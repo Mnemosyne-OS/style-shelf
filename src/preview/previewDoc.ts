@@ -48,12 +48,12 @@ export function escapeHtml(text: string): string {
 
 /** A small scene drawn in a style: what a style tile shows. */
 function styleScene(style: StyleEntry, name: string): string {
-  return `<div style="width:min(100%,300px);padding:var(--space-lg);border:var(--border-subtle);border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-card)">
+  return `<div style="width:min(100%,300px);padding:var(--space-lg);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-card)">
 <p style="margin:0 0 6px;font:11px/1.2 var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)">${escapeHtml(style.manifest.id)}</p>
 <p style="margin:0 0 14px;font-size:18px;font-weight:600;color:var(--text-primary)">${escapeHtml(name)}</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap">
 <span style="padding:8px 14px;border-radius:var(--radius-md);background:var(--accent);color:var(--bg-void);font-weight:600;font-size:13px">Aa</span>
-<span style="padding:8px 14px;border-radius:var(--radius-md);border:var(--border-accent);color:var(--text-accent);font-size:13px">Aa</span>
+<span style="padding:8px 14px;border-radius:var(--radius-md);border:1px solid var(--border-accent);color:var(--text-accent);font-size:13px">Aa</span>
 <span style="padding:8px 10px;border-radius:999px;background:var(--accent-glow);color:var(--text-accent);font:12px var(--font-mono)">#tag</span>
 </div></div>`;
 }
@@ -76,16 +76,16 @@ ${icons ? `<div class="ss-preview-icons">${icons}</div>` : ''}
  */
 export function studioDoc(manifest: SkinManifest, name: string): string {
   const body = `<div style="display:grid;gap:var(--space-md);width:min(100%,380px)">
-<div style="padding:var(--space-lg);border:var(--border-subtle);border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-card)">
+<div style="padding:var(--space-lg);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-card)">
 <p style="margin:0 0 6px;font:11px/1.2 var(--font-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)">${escapeHtml(manifest.id)}</p>
 <p style="margin:0 0 8px;font-size:20px;font-weight:600;color:var(--text-primary)">${escapeHtml(name)}</p>
 <p style="margin:0 0 16px;font-size:14px;line-height:1.5;color:var(--text-secondary)">Aa Bb Cc 0123 · <span style="color:var(--text-accent)">accent</span></p>
 <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
 <span style="padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-md);background:var(--accent);color:var(--bg-void);font-weight:600;font-size:13px;box-shadow:var(--shadow-accent)">Aa</span>
-<span style="padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-md);border:var(--border-accent);color:var(--text-accent);font-size:13px">Aa</span>
+<span style="padding:var(--space-sm) var(--space-lg);border-radius:var(--radius-md);border:1px solid var(--border-accent);color:var(--text-accent);font-size:13px">Aa</span>
 <span style="padding:6px 10px;border-radius:999px;background:var(--accent-glow);color:var(--text-accent);font:12px var(--font-mono)">#tag</span>
 </div></div>
-<div style="display:flex;gap:10px;align-items:center;padding:10px 12px;border:var(--border-subtle);border-radius:var(--radius-sm);background:var(--bg-panel);color:var(--text-muted);font-size:14px">name@example.com</div>
+<div style="display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--border-subtle);border-radius:var(--radius-sm);background:var(--bg-panel);color:var(--text-muted);font-size:14px">name@example.com</div>
 <div style="display:flex;gap:14px;align-items:center;padding:10px 12px;border-radius:var(--radius-md);background:var(--bg-surface);font:12px var(--font-mono);color:var(--text-secondary)">
 <span style="display:inline-flex;gap:6px;align-items:center"><i style="width:9px;height:9px;border-radius:50%;background:var(--status-active)"></i>ok</span>
 <span style="display:inline-flex;gap:6px;align-items:center"><i style="width:9px;height:9px;border-radius:50%;background:var(--status-warning)"></i>!</span>

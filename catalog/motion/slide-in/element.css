@@ -1,7 +1,7 @@
 .ss-slide-in {
   width: min(100%, 220px);
   padding: var(--space-md);
-  border: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
   border-left: 3px solid var(--accent);
   border-radius: var(--radius-sm);
   background: var(--bg-card);

@@ -3,7 +3,7 @@
 .ss-field-text__input {
   font: 14px/1.2 var(--font-ui);
   padding: 10px 12px;
-  border: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   background: var(--bg-panel);
   color: var(--text-primary);

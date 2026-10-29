@@ -2,7 +2,7 @@
   box-sizing: border-box;
   display: grid; grid-template-columns: 44px 1fr; gap: var(--space-md); align-items: center;
   width: min(100%, 300px); padding: var(--space-md);
-  border: var(--border-subtle); border-radius: var(--radius-lg); background: var(--bg-surface);
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: var(--bg-surface);
 }
 .ss-placeholder-card__avatar, .ss-placeholder-card__line, .ss-placeholder-card__block {
   background: linear-gradient(90deg, var(--bg-panel) 0%, var(--bg-hover) 40%, var(--bg-panel) 80%) 0 0 / 300% 100%;

@@ -113,6 +113,20 @@ export function checkPersonal(p: PersonalStyle): string | null {
   return v.ok ? null : v.error;
 }
 
+/**
+ * Border tokens as colours (doc 186 §20): `1px solid #aaa` → `#aaa`. A style kept
+ * or exported before the catalogue took the host's contract wrote the whole
+ * border; an element now writes `1px solid var(--border-subtle)` itself.
+ */
+export function bordersAsColours(tokens: Record<string, string>): Record<string, string> {
+  const out = { ...tokens };
+  for (const k of ['--border-subtle', '--border-accent']) {
+    const m = /^\s*[\d.]+px\s+(?:solid|dashed|dotted|double)\s+(.+)$/.exec(out[k] ?? '');
+    if (m) out[k] = m[1].trim();
+  }
+  return out;
+}
+
 function isRecord(v: unknown): v is Record<string, unknown> {
   return typeof v === 'object' && v !== null && !Array.isArray(v);
 }
@@ -125,7 +139,7 @@ function readStored(v: unknown): PersonalStyle | null {
   if (typeof basedOn !== 'string' || typeof license !== 'string' || typeof baseAuthor !== 'string' || typeof updatedAt !== 'string') return null;
   if (!isRecord(tokens) || Object.values(tokens).some((t) => typeof t !== 'string')) return null;
   const p: PersonalStyle = {
-    id, name, author: typeof author === 'string' ? author : '', basedOn, license, baseAuthor, updatedAt, tokens: tokens as Record<string, string>,
+    id, name, author: typeof author === 'string' ? author : '', basedOn, license, baseAuthor, updatedAt, tokens: bordersAsColours(tokens as Record<string, string>),
   };
   return checkPersonal(p) === null ? p : null;
 }
@@ -201,6 +215,6 @@ export function importSkin(text: string, base: StyleEntry, taken: ReadonlySet<st
     license: 'unknown',
     baseAuthor: m.author ?? 'unknown',
     updatedAt: now,
-    tokens,
+    tokens: bordersAsColours(tokens),
   };
 }

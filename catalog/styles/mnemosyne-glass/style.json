@@ -1,0 +1,55 @@
+{
+  "id": "mnemosyne-glass",
+  "kind": "style",
+  "title": {
+    "en": "Mnemosyne OS Glass",
+    "fr": "Mnemosyne OS Verre",
+    "es": "Mnemosyne OS Cristal"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "dark",
+    "mnemosyne-os"
+  ],
+  "manifest": {
+    "id": "mnemosyne-glass",
+    "name": "Mnemosyne OS Glass",
+    "version": "1.0.0",
+    "author": "Mnemosyne OS",
+    "description": "The Mnemosyne OS theme \"glass\", read from the host's globals.css. Translucent text and ground colours are flattened over the page ground for this preview; inside a cartridge the kit reads the host's live variables.",
+    "tokens": {
+      "--accent": "#0a84ff",
+      "--accent-dim": "#086acc",
+      "--accent-glow": "color-mix(in srgb, #0A84FF 16%, transparent)",
+      "--accent-border": "rgba(10, 132, 255, 0.45)",
+      "--bg-void": "#0c0e1a",
+      "--bg-surface": "#1b1c28",
+      "--bg-panel": "#161822",
+      "--bg-card": "#161822",
+      "--bg-hover": "rgba(255, 255, 255, 0.1)",
+      "--text-primary": "#f5f0e8",
+      "--text-secondary": "#d2cec9",
+      "--text-muted": "#aaa8a6",
+      "--text-accent": "#0a84ff",
+      "--font-ui": "'Inter', -apple-system, system-ui, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, 'Roboto Mono', monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "6px",
+      "--radius-md": "10px",
+      "--radius-lg": "16px",
+      "--border-subtle": "rgba(255, 255, 255, 0.1)",
+      "--border-accent": "rgba(255, 255, 255, 0.28)",
+      "--shadow-card": "0 0 0 1px rgba(255, 255, 255, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 40px rgba(0, 0, 0, 0.45)",
+      "--shadow-accent": "0 0 22px -6px rgba(10, 132, 255, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#68b583",
+      "--status-warning": "#db9b48",
+      "--status-overload": "#db686a"
+    }
+  }
+}
