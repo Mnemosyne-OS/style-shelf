@@ -1,0 +1,16 @@
+{
+  "id": "card-stat",
+  "kind": "card",
+  "title": {
+    "en": "Stat card",
+    "fr": "Carte chiffre",
+    "es": "Tarjeta de cifra"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "data",
+    "dashboard"
+  ]
+}

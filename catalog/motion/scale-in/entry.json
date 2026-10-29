@@ -1,0 +1,16 @@
+{
+  "id": "scale-in",
+  "kind": "motion",
+  "title": {
+    "en": "Scale in",
+    "fr": "Zoom d'entrée",
+    "es": "Escala de entrada"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "entrance"
+  ]
+}

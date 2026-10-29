@@ -1,0 +1,16 @@
+{
+  "id": "alert-stripe",
+  "kind": "alert",
+  "title": {
+    "en": "Striped alert",
+    "fr": "Alerte à liseré",
+    "es": "Alerta con franja"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "feedback",
+    "status"
+  ]
+}

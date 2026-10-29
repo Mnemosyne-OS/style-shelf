@@ -1,0 +1,12 @@
+.ss-btn-glow {
+  font: 600 14px/1 var(--font-ui);
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-accent);
+  border-radius: var(--radius-md);
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: box-shadow var(--transition-normal), background var(--transition-fast);
+}
+.ss-btn-glow:hover { box-shadow: var(--shadow-accent); background: var(--bg-hover); }
+.ss-btn-glow:focus-visible { outline: 2px solid var(--accent-border); outline-offset: 2px; }

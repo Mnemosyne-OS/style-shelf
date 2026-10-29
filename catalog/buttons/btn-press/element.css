@@ -1,0 +1,14 @@
+.ss-btn-press {
+  font: 700 14px/1 var(--font-ui);
+  padding: var(--space-sm) var(--space-lg);
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: 3px 3px 0 var(--text-primary);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.ss-btn-press:hover { background: var(--bg-hover); }
+.ss-btn-press:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--text-primary); }
+.ss-btn-press:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

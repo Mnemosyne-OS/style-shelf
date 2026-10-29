@@ -1,0 +1,14 @@
+.ss-alert-stripe {
+  box-sizing: border-box; display: grid; gap: var(--space-sm); width: min(100%, 320px); font-family: var(--font-ui); }
+.ss-alert-stripe__item {
+  padding: var(--space-sm) var(--space-md);
+  border: var(--border-subtle);
+  border-left: 4px solid var(--status-active);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  font-size: 13px; line-height: 1.4;
+}
+.ss-alert-stripe__item strong { display: block; font-weight: 600; }
+.ss-alert-stripe__item:nth-child(2) { border-left-color: var(--status-warning); }
+.ss-alert-stripe__item:nth-child(3) { border-left-color: var(--status-overload); }

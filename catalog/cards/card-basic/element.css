@@ -1,0 +1,12 @@
+.ss-card-basic {
+  width: min(100%, 300px);
+  padding: var(--space-lg);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-ui);
+}
+.ss-card-basic__meta { margin: 0 0 var(--space-sm); font: 11px/1.2 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.ss-card-basic__title { margin: 0 0 var(--space-sm); font-size: 17px; color: var(--text-primary); }
+.ss-card-basic__body { margin: 0; font-size: 14px; line-height: 1.5; color: var(--text-secondary); }

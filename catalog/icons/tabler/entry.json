@@ -1,0 +1,24 @@
+{
+  "id": "tabler",
+  "kind": "icons",
+  "title": {
+    "en": "Tabler Icons",
+    "fr": "Tabler Icons",
+    "es": "Tabler Icons"
+  },
+  "license": "MIT",
+  "author": "Paweł Kuna",
+  "tier": "free",
+  "tags": [
+    "icons",
+    "outline",
+    "filled"
+  ],
+  "homepage": "https://tabler.io/icons",
+  "packages": {
+    "any": "@tabler/icons",
+    "react": "@tabler/icons-react",
+    "vue": "@tabler/icons-vue",
+    "svelte": "@tabler/icons-svelte"
+  }
+}

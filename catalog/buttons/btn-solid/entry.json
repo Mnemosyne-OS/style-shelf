@@ -1,0 +1,15 @@
+{
+  "id": "btn-solid",
+  "kind": "button",
+  "title": {
+    "en": "Solid",
+    "fr": "Plein",
+    "es": "Sólido"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action"
+  ]
+}

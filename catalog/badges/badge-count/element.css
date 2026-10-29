@@ -1,0 +1,15 @@
+.ss-badge-count {
+  position: relative; display: inline-flex; align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  border: var(--border-subtle); border-radius: var(--radius-md);
+  background: var(--bg-panel); color: var(--text-primary);
+  font: 500 14px/1 var(--font-ui);
+}
+.ss-badge-count__n {
+  position: absolute; top: -8px; right: -8px;
+  min-width: 20px; height: 20px; padding: 0 6px;
+  display: grid; place-items: center;
+  border-radius: 999px;
+  background: var(--accent); color: var(--bg-void);
+  font: 700 11px/1 var(--font-mono);
+}

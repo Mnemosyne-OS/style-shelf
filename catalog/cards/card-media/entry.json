@@ -1,0 +1,16 @@
+{
+  "id": "card-media",
+  "kind": "card",
+  "title": {
+    "en": "Media card",
+    "fr": "Carte média",
+    "es": "Tarjeta multimedia"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "layout",
+    "gallery"
+  ]
+}

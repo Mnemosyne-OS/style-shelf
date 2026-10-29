@@ -1,0 +1,16 @@
+{
+  "id": "btn-press",
+  "kind": "button",
+  "title": {
+    "en": "Hard press",
+    "fr": "Pression",
+    "es": "Presión"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "bold"
+  ]
+}

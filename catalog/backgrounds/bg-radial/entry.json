@@ -1,0 +1,16 @@
+{
+  "id": "bg-radial",
+  "kind": "background",
+  "title": {
+    "en": "Top glow",
+    "fr": "Lueur du haut",
+    "es": "Resplandor superior"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "backdrop",
+    "glow"
+  ]
+}

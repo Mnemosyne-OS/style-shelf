@@ -1,0 +1,16 @@
+{
+  "id": "spinner",
+  "kind": "motion",
+  "title": {
+    "en": "Ring spinner",
+    "fr": "Anneau de chargement",
+    "es": "Anillo de carga"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "loading"
+  ]
+}

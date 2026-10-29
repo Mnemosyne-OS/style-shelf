@@ -1,0 +1,15 @@
+{
+  "id": "badge-count",
+  "kind": "badge",
+  "title": {
+    "en": "Counter",
+    "fr": "Compteur",
+    "es": "Contador"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "notification"
+  ]
+}

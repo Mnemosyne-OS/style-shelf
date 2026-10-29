@@ -1,0 +1,13 @@
+.ss-field-text { display: grid; gap: 6px; width: min(100%, 280px); font-family: var(--font-ui); }
+.ss-field-text__label { font: 11px/1.2 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.ss-field-text__input {
+  font: 14px/1.2 var(--font-ui);
+  padding: 10px 12px;
+  border: var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.ss-field-text__input::placeholder { color: var(--text-muted); }
+.ss-field-text__input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }

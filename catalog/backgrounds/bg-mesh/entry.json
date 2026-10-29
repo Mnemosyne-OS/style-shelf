@@ -1,0 +1,16 @@
+{
+  "id": "bg-mesh",
+  "kind": "background",
+  "title": {
+    "en": "Color mesh",
+    "fr": "Maillage de couleurs",
+    "es": "Malla de color"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "backdrop",
+    "gradient"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "menu-sidebar",
+  "kind": "menu",
+  "title": {
+    "en": "Sidebar nav",
+    "fr": "Navigation latérale",
+    "es": "Navegación lateral"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "navigation"
+  ]
+}

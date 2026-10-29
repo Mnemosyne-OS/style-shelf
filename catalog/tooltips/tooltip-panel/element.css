@@ -1,0 +1,18 @@
+.ss-tooltip-panel {
+  box-sizing: border-box; position: relative; display: inline-block; margin-bottom: 92px; font-family: var(--font-ui); }
+.ss-tooltip-panel__trigger {
+  color: var(--text-accent); font: 600 14px/1 var(--font-ui);
+  text-decoration: underline dotted; text-underline-offset: 4px; cursor: help;
+}
+.ss-tooltip-panel__tip {
+  position: absolute; top: calc(100% + 10px); left: 50%;
+  width: 200px; transform: translateX(-50%); padding: var(--space-md);
+  border: var(--border-accent); border-radius: var(--radius-md);
+  background: var(--bg-surface); box-shadow: var(--shadow-card);
+  color: var(--text-secondary); font: 12px/1.45 var(--font-ui);
+  opacity: 0; pointer-events: none; transition: opacity var(--transition-fast);
+}
+.ss-tooltip-panel__tip strong { display: block; margin-bottom: 4px; color: var(--text-primary); font-size: 13px; }
+.ss-tooltip-panel:hover .ss-tooltip-panel__tip,
+.ss-tooltip-panel:focus-within .ss-tooltip-panel__tip,
+.ss-tooltip-panel[data-open] .ss-tooltip-panel__tip { opacity: 1; }

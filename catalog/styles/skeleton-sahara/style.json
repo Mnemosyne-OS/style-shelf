@@ -1,0 +1,55 @@
+{
+  "id": "skeleton-sahara",
+  "kind": "style",
+  "title": {
+    "en": "Sahara (Skeleton)",
+    "fr": "Sahara (Skeleton)",
+    "es": "Sahara (Skeleton)"
+  },
+  "license": "MIT",
+  "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "skeleton"
+  ],
+  "manifest": {
+    "id": "skeleton-sahara",
+    "name": "Sahara (Skeleton)",
+    "version": "1.0.0",
+    "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+    "description": "Skeleton theme \"sahara\" (light), from kyrolabs/skeleton-theme src/themes/theme-sahara.css at d40eb56c0477, MIT. Changed: accent lightness moved from 78% to 51% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#885d07",
+      "--accent-dim": "#6f4b06",
+      "--accent-glow": "rgba(136, 93, 7, 0.16)",
+      "--accent-border": "rgba(136, 93, 7, 0.45)",
+      "--bg-void": "#f9e4e8",
+      "--bg-surface": "#f8dce0",
+      "--bg-panel": "#f8dce0",
+      "--bg-card": "#f8dce0",
+      "--bg-hover": "rgba(136, 93, 7, 0.08)",
+      "--text-primary": "#1c635b",
+      "--text-secondary": "#356e67",
+      "--text-muted": "#356e67",
+      "--text-accent": "#885d07",
+      "--font-ui": "'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "9999px",
+      "--radius-md": "9999px",
+      "--radius-lg": "24px",
+      "--border-subtle": "1px solid #f6d3d9",
+      "--border-accent": "1px solid rgba(136, 93, 7, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(136, 93, 7, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#456f02",
+      "--status-warning": "#7c6204",
+      "--status-overload": "#b03376"
+    }
+  }
+}

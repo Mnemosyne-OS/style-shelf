@@ -1,0 +1,16 @@
+{
+  "id": "switch",
+  "kind": "input",
+  "title": {
+    "en": "Switch",
+    "fr": "Interrupteur",
+    "es": "Interruptor"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "form",
+    "toggle"
+  ]
+}

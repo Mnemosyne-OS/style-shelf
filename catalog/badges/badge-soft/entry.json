@@ -1,0 +1,16 @@
+{
+  "id": "badge-soft",
+  "kind": "badge",
+  "title": {
+    "en": "Soft badge",
+    "fr": "Badge doux",
+    "es": "Insignia suave"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "label",
+    "status"
+  ]
+}

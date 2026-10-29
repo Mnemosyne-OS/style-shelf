@@ -1,0 +1,23 @@
+{
+  "id": "lucide",
+  "kind": "icons",
+  "title": {
+    "en": "Lucide",
+    "fr": "Lucide",
+    "es": "Lucide"
+  },
+  "license": "ISC",
+  "author": "Lucide Contributors",
+  "tier": "free",
+  "tags": [
+    "icons",
+    "outline"
+  ],
+  "homepage": "https://lucide.dev",
+  "packages": {
+    "any": "lucide",
+    "react": "lucide-react",
+    "vue": "lucide-vue-next",
+    "svelte": "lucide-svelte"
+  }
+}

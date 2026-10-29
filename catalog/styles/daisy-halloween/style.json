@@ -1,0 +1,55 @@
+{
+  "id": "daisy-halloween",
+  "kind": "style",
+  "title": {
+    "en": "Halloween (daisyUI)",
+    "fr": "Halloween (daisyUI)",
+    "es": "Halloween (daisyUI)"
+  },
+  "license": "MIT",
+  "author": "daisyUI (Pouya Saadeghi and contributors)",
+  "tier": "free",
+  "tags": [
+    "dark",
+    "daisyui"
+  ],
+  "manifest": {
+    "id": "daisy-halloween",
+    "name": "Halloween (daisyUI)",
+    "version": "1.0.0",
+    "author": "daisyUI (Pouya Saadeghi and contributors)",
+    "description": "daisyUI theme \"halloween\" (dark), from saadeghi/daisyui packages/daisyui/src/themes/halloween.css at bf3bac3a397b, MIT.",
+    "tokens": {
+      "--accent": "#fe9a37",
+      "--accent-dim": "#febc85",
+      "--accent-glow": "rgba(254, 154, 55, 0.16)",
+      "--accent-border": "rgba(254, 154, 55, 0.45)",
+      "--bg-void": "#1b1816",
+      "--bg-surface": "#0b0908",
+      "--bg-panel": "#0b0908",
+      "--bg-card": "#0b0908",
+      "--bg-hover": "rgba(254, 154, 55, 0.08)",
+      "--text-primary": "#cdcdcd",
+      "--text-secondary": "#a5a5a4",
+      "--text-muted": "#838281",
+      "--text-accent": "#fe9a37",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "16px",
+      "--radius-md": "8px",
+      "--radius-lg": "16px",
+      "--border-subtle": "1px solid #000000",
+      "--border-accent": "1px solid rgba(254, 154, 55, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.7)",
+      "--shadow-accent": "0 0 22px -6px rgba(254, 154, 55, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#18a34a",
+      "--status-warning": "#d97708",
+      "--status-overload": "#f35248"
+    }
+  }
+}

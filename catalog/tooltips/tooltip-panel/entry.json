@@ -1,0 +1,16 @@
+{
+  "id": "tooltip-panel",
+  "kind": "tooltip",
+  "title": {
+    "en": "Panel tooltip",
+    "fr": "Infobulle panneau",
+    "es": "Tooltip panel"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "hint",
+    "rich"
+  ]
+}

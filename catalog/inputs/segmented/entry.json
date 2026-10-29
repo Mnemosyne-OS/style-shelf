@@ -1,0 +1,16 @@
+{
+  "id": "segmented",
+  "kind": "input",
+  "title": {
+    "en": "Segmented",
+    "fr": "Segments",
+    "es": "Segmentado"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "form",
+    "choice"
+  ]
+}

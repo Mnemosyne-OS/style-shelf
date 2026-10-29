@@ -1,0 +1,16 @@
+{
+  "id": "bg-grid",
+  "kind": "background",
+  "title": {
+    "en": "Line grid",
+    "fr": "Grille de lignes",
+    "es": "Cuadrícula de líneas"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "backdrop",
+    "sf"
+  ]
+}

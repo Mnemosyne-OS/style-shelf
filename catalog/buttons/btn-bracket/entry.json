@@ -1,0 +1,17 @@
+{
+  "id": "btn-bracket",
+  "kind": "button",
+  "title": {
+    "en": "Corner brackets",
+    "fr": "Crochets",
+    "es": "Corchetes"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "hud",
+    "sf"
+  ]
+}

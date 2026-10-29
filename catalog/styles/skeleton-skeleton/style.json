@@ -1,0 +1,55 @@
+{
+  "id": "skeleton-skeleton",
+  "kind": "style",
+  "title": {
+    "en": "Skeleton (Skeleton)",
+    "fr": "Skeleton (Skeleton)",
+    "es": "Skeleton (Skeleton)"
+  },
+  "license": "MIT",
+  "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "skeleton"
+  ],
+  "manifest": {
+    "id": "skeleton-skeleton",
+    "name": "Skeleton (Skeleton)",
+    "version": "1.0.0",
+    "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+    "description": "Skeleton theme \"skeleton\" (light), from kyrolabs/skeleton-theme src/themes/theme-skeleton.css at d40eb56c0477, MIT. Changed: accent lightness moved from 70% to 48% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#04704c",
+      "--accent-dim": "#025a3c",
+      "--accent-glow": "rgba(4, 112, 76, 0.16)",
+      "--accent-border": "rgba(4, 112, 76, 0.45)",
+      "--bg-void": "#e4e6ee",
+      "--bg-surface": "#dbdee9",
+      "--bg-panel": "#dbdee9",
+      "--bg-card": "#dbdee9",
+      "--bg-hover": "rgba(4, 112, 76, 0.08)",
+      "--text-primary": "#000000",
+      "--text-secondary": "#121314",
+      "--text-muted": "#4b4c4f",
+      "--text-accent": "#04704c",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "9999px",
+      "--radius-md": "9999px",
+      "--radius-lg": "8px",
+      "--border-subtle": "1px solid #d2d6e3",
+      "--border-accent": "1px solid rgba(4, 112, 76, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(4, 112, 76, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#446c05",
+      "--status-warning": "#7d5e00",
+      "--status-overload": "#be0968"
+    }
+  }
+}

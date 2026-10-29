@@ -1,0 +1,15 @@
+{
+  "id": "badge-dot",
+  "kind": "badge",
+  "title": {
+    "en": "Status dot",
+    "fr": "Pastille d'état",
+    "es": "Punto de estado"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "status"
+  ]
+}

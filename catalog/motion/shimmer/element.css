@@ -1,0 +1,16 @@
+.ss-shimmer { display: grid; gap: 10px; width: min(100%, 240px); }
+.ss-shimmer__line {
+  height: 12px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--bg-panel) 0%, var(--bg-hover) 40%, var(--bg-panel) 80%) 0 0 / 300% 100%;
+  animation: ss-shimmer 1.4s linear infinite;
+}
+.ss-shimmer__line:nth-child(2) { width: 80%; }
+.ss-shimmer__line:nth-child(3) { width: 55%; }
+@keyframes ss-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-shimmer__line { animation: none; }
+}

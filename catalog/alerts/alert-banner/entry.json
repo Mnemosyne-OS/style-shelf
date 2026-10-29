@@ -1,0 +1,16 @@
+{
+  "id": "alert-banner",
+  "kind": "alert",
+  "title": {
+    "en": "Banner",
+    "fr": "Bandeau",
+    "es": "Banner"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "feedback",
+    "page"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "placeholder-pulse",
+  "kind": "placeholder",
+  "title": {
+    "en": "Pulsing rows",
+    "fr": "Lignes pulsées",
+    "es": "Filas pulsantes"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "loading",
+    "list"
+  ]
+}

@@ -1,0 +1,5 @@
+.ss-bg-radial {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 0%, var(--accent-glow), transparent 70%),
+    var(--bg-void);
+}

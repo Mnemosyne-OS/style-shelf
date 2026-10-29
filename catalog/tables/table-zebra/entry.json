@@ -1,0 +1,15 @@
+{
+  "id": "table-zebra",
+  "kind": "table",
+  "title": {
+    "en": "Striped table",
+    "fr": "Tableau rayé",
+    "es": "Tabla rayada"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "data"
+  ]
+}

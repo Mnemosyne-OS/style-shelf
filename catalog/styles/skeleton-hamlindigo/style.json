@@ -1,0 +1,55 @@
+{
+  "id": "skeleton-hamlindigo",
+  "kind": "style",
+  "title": {
+    "en": "Hamlindigo (Skeleton)",
+    "fr": "Hamlindigo (Skeleton)",
+    "es": "Hamlindigo (Skeleton)"
+  },
+  "license": "MIT",
+  "author": "@rcgy for the Skeleton community (via kyrolabs/skeleton-theme)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "skeleton"
+  ],
+  "manifest": {
+    "id": "skeleton-hamlindigo",
+    "name": "Hamlindigo (Skeleton)",
+    "version": "1.0.0",
+    "author": "@rcgy for the Skeleton community (via kyrolabs/skeleton-theme)",
+    "description": "Skeleton theme \"hamlindigo\" (light), from kyrolabs/skeleton-theme src/themes/theme-hamlindigo.css at d40eb56c0477, MIT. Changed: accent lightness moved from 80% to 51% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#516492",
+      "--accent-dim": "#3e507d",
+      "--accent-glow": "rgba(81, 100, 146, 0.16)",
+      "--accent-border": "rgba(81, 100, 146, 0.45)",
+      "--bg-void": "#e8eaf1",
+      "--bg-surface": "#e0e4ed",
+      "--bg-panel": "#e0e4ed",
+      "--bg-card": "#e0e4ed",
+      "--bg-hover": "rgba(81, 100, 146, 0.08)",
+      "--text-primary": "#000000",
+      "--text-secondary": "#131314",
+      "--text-muted": "#4d4d50",
+      "--text-accent": "#516492",
+      "--font-ui": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "2px",
+      "--radius-md": "2px",
+      "--radius-lg": "2px",
+      "--border-subtle": "2px solid #d8dde8",
+      "--border-accent": "2px solid rgba(81, 100, 146, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(81, 100, 146, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#20715c",
+      "--status-warning": "#836001",
+      "--status-overload": "#925367"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.ss-btn-bracket {
+  --ss-btn-bracket-c: var(--accent-border);
+  font: 600 12px/1 var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: var(--space-md) var(--space-lg);
+  border: var(--border-subtle);
+  border-radius: 0;
+  color: var(--text-primary);
+  cursor: pointer;
+  background:
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 0 0 / 12px 1px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 0 0 / 1px 12px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 100% 0 / 12px 1px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 100% 0 / 1px 12px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 0 100% / 12px 1px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 0 100% / 1px 12px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 100% 100% / 12px 1px no-repeat,
+    linear-gradient(var(--ss-btn-bracket-c), var(--ss-btn-bracket-c)) 100% 100% / 1px 12px no-repeat,
+    var(--bg-panel);
+  transition: box-shadow var(--transition-fast);
+}
+.ss-btn-bracket:hover { --ss-btn-bracket-c: var(--accent); box-shadow: var(--shadow-accent); }
+.ss-btn-bracket:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }

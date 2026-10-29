@@ -1,0 +1,15 @@
+{
+  "id": "placeholder-card",
+  "kind": "placeholder",
+  "title": {
+    "en": "Card skeleton",
+    "fr": "Squelette de carte",
+    "es": "Esqueleto de tarjeta"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "loading"
+  ]
+}

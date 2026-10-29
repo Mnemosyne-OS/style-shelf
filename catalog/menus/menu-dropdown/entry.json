@@ -1,0 +1,16 @@
+{
+  "id": "menu-dropdown",
+  "kind": "menu",
+  "title": {
+    "en": "Dropdown menu",
+    "fr": "Menu déroulant",
+    "es": "Menú desplegable"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "navigation",
+    "native"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "btn-ghost",
+  "kind": "button",
+  "title": {
+    "en": "Ghost",
+    "fr": "Fantôme",
+    "es": "Fantasma"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "secondary"
+  ]
+}

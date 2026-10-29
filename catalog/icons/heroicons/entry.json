@@ -1,0 +1,22 @@
+{
+  "id": "heroicons",
+  "kind": "icons",
+  "title": {
+    "en": "Heroicons",
+    "fr": "Heroicons",
+    "es": "Heroicons"
+  },
+  "license": "MIT",
+  "author": "Tailwind Labs",
+  "tier": "free",
+  "tags": [
+    "icons",
+    "outline",
+    "solid"
+  ],
+  "homepage": "https://heroicons.com",
+  "packages": {
+    "react": "@heroicons/react",
+    "vue": "@heroicons/vue"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "skeleton-seasonal",
+  "kind": "style",
+  "title": {
+    "en": "Seasonal (Skeleton)",
+    "fr": "Seasonal (Skeleton)",
+    "es": "Seasonal (Skeleton)"
+  },
+  "license": "MIT",
+  "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "skeleton"
+  ],
+  "manifest": {
+    "id": "skeleton-seasonal",
+    "name": "Seasonal (Skeleton)",
+    "version": "1.0.0",
+    "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+    "description": "Skeleton theme \"seasonal\" (light), from kyrolabs/skeleton-theme src/themes/theme-seasonal.css at d40eb56c0477, MIT. Changed: accent lightness moved from 69% to 46% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#056659",
+      "--accent-dim": "#015046",
+      "--accent-glow": "rgba(5, 102, 89, 0.16)",
+      "--accent-border": "rgba(5, 102, 89, 0.45)",
+      "--bg-void": "#dbdee2",
+      "--bg-surface": "#cfd3d8",
+      "--bg-panel": "#cfd3d8",
+      "--bg-card": "#cfd3d8",
+      "--bg-hover": "rgba(5, 102, 89, 0.08)",
+      "--text-primary": "#0f233e",
+      "--text-secondary": "#33445d",
+      "--text-muted": "#4c5b71",
+      "--text-accent": "#056659",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "12px",
+      "--radius-md": "12px",
+      "--radius-lg": "12px",
+      "--border-subtle": "0px solid #c3c8cf",
+      "--border-accent": "0px solid rgba(5, 102, 89, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(5, 102, 89, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#466403",
+      "--status-warning": "#6e590a",
+      "--status-overload": "#ae2334"
+    }
+  }
+}

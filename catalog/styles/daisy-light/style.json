@@ -1,0 +1,55 @@
+{
+  "id": "daisy-light",
+  "kind": "style",
+  "title": {
+    "en": "Light (daisyUI)",
+    "fr": "Light (daisyUI)",
+    "es": "Light (daisyUI)"
+  },
+  "license": "MIT",
+  "author": "daisyUI (Pouya Saadeghi and contributors)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "daisyui"
+  ],
+  "manifest": {
+    "id": "daisy-light",
+    "name": "Light (daisyUI)",
+    "version": "1.0.0",
+    "author": "daisyUI (Pouya Saadeghi and contributors)",
+    "description": "daisyUI theme \"light\" (light), from saadeghi/daisyui packages/daisyui/src/themes/light.css at bf3bac3a397b, MIT. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#422ad5",
+      "--accent-dim": "#3404b9",
+      "--accent-glow": "rgba(66, 42, 213, 0.16)",
+      "--accent-border": "rgba(66, 42, 213, 0.45)",
+      "--bg-void": "#ffffff",
+      "--bg-surface": "#f8f8f8",
+      "--bg-panel": "#f8f8f8",
+      "--bg-card": "#f8f8f8",
+      "--bg-hover": "rgba(66, 42, 213, 0.08)",
+      "--text-primary": "#18181b",
+      "--text-secondary": "#3f3f42",
+      "--text-muted": "#717173",
+      "--text-accent": "#422ad5",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "8px",
+      "--radius-md": "4px",
+      "--radius-lg": "8px",
+      "--border-subtle": "1px solid #eeeeee",
+      "--border-accent": "1px solid rgba(66, 42, 213, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(66, 42, 213, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#0d815a",
+      "--status-warning": "#916c04",
+      "--status-overload": "#cc3957"
+    }
+  }
+}

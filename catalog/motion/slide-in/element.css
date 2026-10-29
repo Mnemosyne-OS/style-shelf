@@ -1,0 +1,19 @@
+.ss-slide-in {
+  width: min(100%, 220px);
+  padding: var(--space-md);
+  border: var(--border-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font: 14px/1.4 var(--font-ui);
+  box-shadow: var(--shadow-card);
+  animation: ss-slide-in 480ms cubic-bezier(.2, .8, .2, 1) both;
+}
+@keyframes ss-slide-in {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-slide-in { animation: none; }
+}

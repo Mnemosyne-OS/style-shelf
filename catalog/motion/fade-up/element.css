@@ -1,0 +1,8 @@
+.ss-fade-up { animation: ss-fade-up 520ms cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes ss-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-fade-up { animation: none; }
+}

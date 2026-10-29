@@ -1,0 +1,16 @@
+{
+  "id": "table-lined",
+  "kind": "table",
+  "title": {
+    "en": "Lined table",
+    "fr": "Tableau à filets",
+    "es": "Tabla con líneas"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "data",
+    "minimal"
+  ]
+}

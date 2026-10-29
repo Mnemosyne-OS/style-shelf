@@ -1,0 +1,15 @@
+{
+  "id": "field-text",
+  "kind": "input",
+  "title": {
+    "en": "Text field",
+    "fr": "Champ texte",
+    "es": "Campo de texto"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "form"
+  ]
+}

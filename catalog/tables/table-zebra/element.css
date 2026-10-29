@@ -1,0 +1,14 @@
+.ss-table-zebra {
+  width: min(100%, 360px); border-collapse: separate; border-spacing: 0;
+  border: var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;
+  font: 13px/1.3 var(--font-ui); color: var(--text-primary);
+}
+.ss-table-zebra th {
+  padding: 10px 12px; text-align: left;
+  background: var(--bg-surface); color: var(--text-muted);
+  font: 600 11px/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.ss-table-zebra td { padding: 10px 12px; }
+.ss-table-zebra tbody tr:nth-child(even) td { background: var(--bg-panel); }
+.ss-table-zebra tbody tr:hover td { background: var(--bg-hover); }
+.ss-table-zebra td:last-child { text-align: right; font-family: var(--font-mono); color: var(--text-accent); }

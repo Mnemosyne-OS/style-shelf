@@ -1,0 +1,55 @@
+{
+  "id": "brutal",
+  "kind": "style",
+  "title": {
+    "en": "Brutalist",
+    "fr": "Brutaliste",
+    "es": "Brutalista"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "light",
+    "bold"
+  ],
+  "manifest": {
+    "id": "brutal",
+    "name": "Brutalist",
+    "version": "1.0.0",
+    "author": "Mnemosyne OS",
+    "description": "Thick black lines, hard shadows, electric blue.",
+    "tokens": {
+      "--accent": "#2b2bff",
+      "--accent-dim": "#1a1ad0",
+      "--accent-glow": "rgba(43, 43, 255, 0.14)",
+      "--accent-border": "#000000",
+      "--bg-void": "#fffdf2",
+      "--bg-surface": "#fff6c9",
+      "--bg-panel": "#ffffff",
+      "--bg-card": "#ffffff",
+      "--bg-hover": "#fff1a8",
+      "--text-primary": "#000000",
+      "--text-secondary": "#1a1a1a",
+      "--text-muted": "#3d3d3d",
+      "--text-accent": "#2b2bff",
+      "--font-ui": "'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "0px",
+      "--radius-md": "0px",
+      "--radius-lg": "0px",
+      "--border-subtle": "2px solid #000000",
+      "--border-accent": "2px solid #000000",
+      "--shadow-card": "4px 4px 0 #000000",
+      "--shadow-accent": "6px 6px 0 #000000",
+      "--transition-fast": "90ms linear",
+      "--transition-normal": "160ms linear",
+      "--status-active": "#007a3d",
+      "--status-warning": "#8a5a00",
+      "--status-overload": "#c40000"
+    }
+  }
+}

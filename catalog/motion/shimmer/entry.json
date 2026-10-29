@@ -1,0 +1,17 @@
+{
+  "id": "shimmer",
+  "kind": "motion",
+  "title": {
+    "en": "Loading shimmer",
+    "fr": "Chargement scintillant",
+    "es": "Carga brillante"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "loading",
+    "skeleton"
+  ]
+}

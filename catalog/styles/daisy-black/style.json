@@ -1,0 +1,55 @@
+{
+  "id": "daisy-black",
+  "kind": "style",
+  "title": {
+    "en": "Black (daisyUI)",
+    "fr": "Black (daisyUI)",
+    "es": "Black (daisyUI)"
+  },
+  "license": "MIT",
+  "author": "daisyUI (Pouya Saadeghi and contributors)",
+  "tier": "free",
+  "tags": [
+    "dark",
+    "daisyui"
+  ],
+  "manifest": {
+    "id": "daisy-black",
+    "name": "Black (daisyUI)",
+    "version": "1.0.0",
+    "author": "daisyUI (Pouya Saadeghi and contributors)",
+    "description": "daisyUI theme \"black\" (dark), from saadeghi/daisyui packages/daisyui/src/themes/black.css at bf3bac3a397b, MIT. Changed: accent lightness moved from 35% to 59% (oklch) so text on it reads at 4.5:1. Changed: success lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#7e7e7e",
+      "--accent-dim": "#939393",
+      "--accent-glow": "rgba(126, 126, 126, 0.16)",
+      "--accent-border": "rgba(126, 126, 126, 0.45)",
+      "--bg-void": "#000000",
+      "--bg-surface": "#141414",
+      "--bg-panel": "#141414",
+      "--bg-card": "#141414",
+      "--bg-hover": "rgba(126, 126, 126, 0.08)",
+      "--text-primary": "#d6d6d6",
+      "--text-secondary": "#9e9e9e",
+      "--text-muted": "#7f7f7f",
+      "--text-accent": "#7e7e7e",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "0px",
+      "--radius-md": "0px",
+      "--radius-lg": "0px",
+      "--border-subtle": "1px solid #1b1b1b",
+      "--border-accent": "1px solid rgba(126, 126, 126, 0.45)",
+      "--shadow-card": "none",
+      "--shadow-accent": "0 0 22px -6px rgba(126, 126, 126, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#249120",
+      "--status-warning": "#ffff00",
+      "--status-overload": "#ff0301"
+    }
+  }
+}

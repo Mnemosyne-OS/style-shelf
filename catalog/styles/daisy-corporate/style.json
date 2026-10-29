@@ -1,0 +1,55 @@
+{
+  "id": "daisy-corporate",
+  "kind": "style",
+  "title": {
+    "en": "Corporate (daisyUI)",
+    "fr": "Corporate (daisyUI)",
+    "es": "Corporate (daisyUI)"
+  },
+  "license": "MIT",
+  "author": "daisyUI (Pouya Saadeghi and contributors)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "daisyui"
+  ],
+  "manifest": {
+    "id": "daisy-corporate",
+    "name": "Corporate (daisyUI)",
+    "version": "1.0.0",
+    "author": "daisyUI (Pouya Saadeghi and contributors)",
+    "description": "daisyUI theme \"corporate\" (light), from saadeghi/daisyui packages/daisyui/src/themes/corporate.css at bf3bac3a397b, MIT. Changed: accent lightness moved from 58% to 52% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#066ea6",
+      "--accent-dim": "#055988",
+      "--accent-glow": "rgba(6, 110, 166, 0.16)",
+      "--accent-border": "rgba(6, 110, 166, 0.45)",
+      "--bg-void": "#ffffff",
+      "--bg-surface": "#e8e8e8",
+      "--bg-panel": "#e8e8e8",
+      "--bg-card": "#e8e8e8",
+      "--bg-hover": "rgba(6, 110, 166, 0.08)",
+      "--text-primary": "#181a2a",
+      "--text-secondary": "#3f4150",
+      "--text-muted": "#666874",
+      "--text-accent": "#066ea6",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "4px",
+      "--radius-md": "4px",
+      "--radius-lg": "4px",
+      "--border-subtle": "1px solid #d1d1d1",
+      "--border-accent": "1px solid rgba(6, 110, 166, 0.45)",
+      "--shadow-card": "none",
+      "--shadow-accent": "0 0 22px -6px rgba(6, 110, 166, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#097934",
+      "--status-warning": "#7f6605",
+      "--status-overload": "#c52838"
+    }
+  }
+}

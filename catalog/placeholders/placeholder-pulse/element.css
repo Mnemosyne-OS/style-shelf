@@ -1,0 +1,16 @@
+.ss-placeholder-pulse { display: grid; gap: 10px; width: min(100%, 280px); }
+.ss-placeholder-pulse__row { display: grid; grid-template-columns: 24px 1fr 48px; gap: 10px; align-items: center; }
+.ss-placeholder-pulse__row > span {
+  height: 12px; border-radius: var(--radius-sm); background: var(--bg-hover);
+  animation: ss-placeholder-pulse 1.6s ease-in-out infinite;
+}
+.ss-placeholder-pulse__row > span:first-child { height: 24px; border-radius: var(--radius-sm); }
+.ss-placeholder-pulse__row:nth-child(2) > span { animation-delay: 0.15s; }
+.ss-placeholder-pulse__row:nth-child(3) > span { animation-delay: 0.3s; }
+@keyframes ss-placeholder-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-placeholder-pulse__row > span { animation: none; }
+}

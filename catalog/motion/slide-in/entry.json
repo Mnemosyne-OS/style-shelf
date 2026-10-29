@@ -1,0 +1,17 @@
+{
+  "id": "slide-in",
+  "kind": "motion",
+  "title": {
+    "en": "Slide-in panel",
+    "fr": "Panneau glissant",
+    "es": "Panel deslizante"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "entrance",
+    "panel"
+  ]
+}

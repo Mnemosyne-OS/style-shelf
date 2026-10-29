@@ -1,0 +1,17 @@
+{
+  "id": "pulse-ring",
+  "kind": "motion",
+  "title": {
+    "en": "Pulse ring",
+    "fr": "Anneau pulsant",
+    "es": "Anillo pulsante"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "status",
+    "live"
+  ]
+}

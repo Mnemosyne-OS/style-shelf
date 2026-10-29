@@ -1,0 +1,55 @@
+{
+  "id": "daisy-cyberpunk",
+  "kind": "style",
+  "title": {
+    "en": "Cyberpunk (daisyUI)",
+    "fr": "Cyberpunk (daisyUI)",
+    "es": "Cyberpunk (daisyUI)"
+  },
+  "license": "MIT",
+  "author": "daisyUI (Pouya Saadeghi and contributors)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "daisyui"
+  ],
+  "manifest": {
+    "id": "daisy-cyberpunk",
+    "name": "Cyberpunk (daisyUI)",
+    "version": "1.0.0",
+    "author": "daisyUI (Pouya Saadeghi and contributors)",
+    "description": "daisyUI theme \"cyberpunk\" (light), from saadeghi/daisyui packages/daisyui/src/themes/cyberpunk.css at bf3bac3a397b, MIT. Changed: accent lightness moved from 74% to 53% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#b5375d",
+      "--accent-dim": "#9d1e4a",
+      "--accent-glow": "rgba(181, 55, 93, 0.16)",
+      "--accent-border": "rgba(181, 55, 93, 0.45)",
+      "--bg-void": "#fff260",
+      "--bg-surface": "#f7e83a",
+      "--bg-panel": "#f7e83a",
+      "--bg-card": "#f7e83a",
+      "--bg-hover": "rgba(181, 55, 93, 0.08)",
+      "--text-primary": "#000000",
+      "--text-secondary": "#161403",
+      "--text-muted": "#55501b",
+      "--text-accent": "#b5375d",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "0px",
+      "--radius-md": "0px",
+      "--radius-lg": "0px",
+      "--border-subtle": "1px solid #e3d40e",
+      "--border-accent": "1px solid rgba(181, 55, 93, 0.45)",
+      "--shadow-card": "none",
+      "--shadow-accent": "0 0 22px -6px rgba(181, 55, 93, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#03744b",
+      "--status-warning": "#836000",
+      "--status-overload": "#bc333b"
+    }
+  }
+}

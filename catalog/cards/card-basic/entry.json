@@ -1,0 +1,15 @@
+{
+  "id": "card-basic",
+  "kind": "card",
+  "title": {
+    "en": "Content card",
+    "fr": "Carte de contenu",
+    "es": "Tarjeta de contenido"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "layout"
+  ]
+}

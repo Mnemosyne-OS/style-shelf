@@ -1,0 +1,17 @@
+{
+  "id": "typing-dots",
+  "kind": "motion",
+  "title": {
+    "en": "Typing dots",
+    "fr": "Points de saisie",
+    "es": "Puntos de escritura"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "chat",
+    "loading"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "skeleton-crimson",
+  "kind": "style",
+  "title": {
+    "en": "Crimson (Skeleton)",
+    "fr": "Crimson (Skeleton)",
+    "es": "Crimson (Skeleton)"
+  },
+  "license": "MIT",
+  "author": "@ak4zh for the Skeleton community (via kyrolabs/skeleton-theme)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "skeleton"
+  ],
+  "manifest": {
+    "id": "skeleton-crimson",
+    "name": "Crimson (Skeleton)",
+    "version": "1.0.0",
+    "author": "@ak4zh for the Skeleton community (via kyrolabs/skeleton-theme)",
+    "description": "Skeleton theme \"crimson\" (light), from kyrolabs/skeleton-theme src/themes/theme-crimson.css at d40eb56c0477, MIT. Changed: accent lightness moved from 56% to 50% (oklch) so text on it reads at 4.5:1. Changed: success, warning, error lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#b90d32",
+      "--accent-dim": "#990026",
+      "--accent-glow": "rgba(185, 13, 50, 0.16)",
+      "--accent-border": "rgba(185, 13, 50, 0.45)",
+      "--bg-void": "#dfe0e2",
+      "--bg-surface": "#d5d5d9",
+      "--bg-panel": "#d5d5d9",
+      "--bg-card": "#d5d5d9",
+      "--bg-hover": "rgba(185, 13, 50, 0.08)",
+      "--text-primary": "#15171f",
+      "--text-secondary": "#373941",
+      "--text-muted": "#595b62",
+      "--text-accent": "#b90d32",
+      "--font-ui": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "24px",
+      "--radius-md": "24px",
+      "--radius-lg": "24px",
+      "--border-subtle": "1px solid #cacbcf",
+      "--border-accent": "1px solid rgba(185, 13, 50, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(185, 13, 50, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#4d6421",
+      "--status-warning": "#725a00",
+      "--status-overload": "#904448"
+    }
+  }
+}

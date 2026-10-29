@@ -1,0 +1,12 @@
+.ss-spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-glow);
+  border-top-color: var(--accent);
+  animation: ss-spinner 0.8s linear infinite;
+}
+@keyframes ss-spinner { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .ss-spinner { animation: none; }
+}

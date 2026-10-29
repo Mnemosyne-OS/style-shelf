@@ -1,0 +1,24 @@
+{
+  "id": "phosphor",
+  "kind": "icons",
+  "title": {
+    "en": "Phosphor",
+    "fr": "Phosphor",
+    "es": "Phosphor"
+  },
+  "license": "MIT",
+  "author": "Phosphor Icons",
+  "tier": "free",
+  "tags": [
+    "icons",
+    "outline",
+    "filled",
+    "duotone"
+  ],
+  "homepage": "https://phosphoricons.com",
+  "packages": {
+    "any": "@phosphor-icons/web",
+    "react": "@phosphor-icons/react",
+    "vue": "@phosphor-icons/vue"
+  }
+}

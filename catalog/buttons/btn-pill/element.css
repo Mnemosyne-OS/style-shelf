@@ -1,0 +1,12 @@
+.ss-btn-pill {
+  font: 600 13px/1 var(--font-ui);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--accent-glow);
+  color: var(--text-accent);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+.ss-btn-pill:hover { border-color: var(--accent-border); }
+.ss-btn-pill:focus-visible { outline: 2px solid var(--accent-border); outline-offset: 2px; }

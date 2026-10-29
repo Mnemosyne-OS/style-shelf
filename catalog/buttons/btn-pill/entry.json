@@ -1,0 +1,16 @@
+{
+  "id": "btn-pill",
+  "kind": "button",
+  "title": {
+    "en": "Pill",
+    "fr": "Pilule",
+    "es": "Píldora"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "soft"
+  ]
+}

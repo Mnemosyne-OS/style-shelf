@@ -1,0 +1,17 @@
+{
+  "id": "stagger-list",
+  "kind": "motion",
+  "title": {
+    "en": "Staggered list",
+    "fr": "Liste en cascade",
+    "es": "Lista escalonada"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "entrance",
+    "list"
+  ]
+}

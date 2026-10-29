@@ -1,0 +1,70 @@
+{
+  "name": "@mnemosyne-plugins/style-shelf",
+  "displayName": "Style Shelf",
+  "version": "0.1.0",
+  "category": "Creation",
+  "license": "MIT",
+  "repository": "https://github.com/Mnemosyne-OS/style-shelf",
+  "description": "A catalogue of styles and UI elements to put in a cart: buttons, cards, fields, motion, backgrounds and icon packs, each drawn in the chosen style. The kit goes into the project and the IDE adapts the style to the code.",
+  "descriptionI18n": {
+    "en": "A catalogue of styles and UI elements to put in a cart: buttons, cards, fields, motion, backgrounds and icon packs, each drawn in the chosen style. The kit goes into the project and the IDE adapts the style to the code.",
+    "fr": "Un catalogue de styles et d'éléments d'interface à mettre au panier : boutons, cartes, champs, motion, fonds et packs d'icônes, chacun dessiné dans le style choisi. Le kit va dans le projet et l'IDE adapte le style au code.",
+    "es": "Un catálogo de estilos y elementos de interfaz para poner en el carrito: botones, tarjetas, campos, motion, fondos y packs de iconos, cada uno dibujado en el estilo elegido. El kit va al proyecto y el IDE adapta el estilo al código."
+  },
+  "keywords": [
+    "design",
+    "style",
+    "theme",
+    "ui kit",
+    "buttons",
+    "motion",
+    "animation",
+    "icons",
+    "design tokens",
+    "catalogue",
+    "estilo",
+    "botones",
+    "iconos",
+    "boutons",
+    "icônes"
+  ],
+  "permissions": [
+    "dialog:open"
+  ],
+  "entrypoints": {
+    "renderer": "index.html"
+  },
+  "widgets": [
+    {
+      "id": "style-shelf-main",
+      "icon": "🛒",
+      "name": "Style Shelf",
+      "route": "index.html",
+      "defaultWidth": 1240,
+      "defaultHeight": 820
+    }
+  ],
+  "ui": {
+    "locations": [
+      "sidebar",
+      "desktop-icon"
+    ],
+    "label": "Style Shelf",
+    "defaultWindow": {
+      "width": 1240,
+      "height": 820,
+      "minWidth": 360,
+      "minHeight": 480
+    },
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7h18M3 13h18M3 19h18\"/><rect x=\"6\" y=\"3\" width=\"4\" height=\"4\"/><rect x=\"13\" y=\"9\" width=\"4\" height=\"4\"/><rect x=\"8\" y=\"15\" width=\"4\" height=\"4\"/></svg>",
+    "tooltip": "Style Shelf: styles and UI elements for the next app"
+  },
+  "agentActions": [
+    {
+      "id": "cart",
+      "summary": "Read the Style Shelf cart as a kit: the chosen style (design tokens), the chosen UI elements with their CSS and markup, the icon packs, the licences, and a brief telling how to apply them to the project.",
+      "details": "ready is false until a style is chosen (missing names it). When ready, kit holds everything as data and brief is the same instructions as BRIEF.md with tokens.css and elements.css inside; writtenTo is the style-shelf folder the person last wrote the kit to, or null. premium lists the premium entries in the kit and the access the host announced (open, or unknown when it announced nothing); unknown never holds the kit back.",
+      "effect": "read"
+    }
+  ]
+}

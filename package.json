@@ -1,0 +1,36 @@
+{
+  "name": "@mnemosyne-plugins/style-shelf",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Style Shelf: a catalogue of styles and UI elements (buttons, cards, fields, motion, backgrounds, icon packs) to put in a cart; the IDE picks up the kit and adapts the chosen style to the code (doc 186). Runs in any browser, and inside Mnemosyne OS writes the kit into the project.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "dev:cartridge": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.eslint.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@mnemosyne_os/cartridge-sdk": "0.6.1",
+    "@mnemosyne_os/design-sdk": "0.2.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.4.8",
+    "@testing-library/react": "16.0.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "jsdom": "25.0.1",
+    "typescript": "5.5.3",
+    "vite": "5.4.1",
+    "vitest": "3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mnemosyne-OS/style-shelf"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tooltip-bubble",
+  "kind": "tooltip",
+  "title": {
+    "en": "Bubble tooltip",
+    "fr": "Infobulle",
+    "es": "Tooltip burbuja"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "hint"
+  ]
+}

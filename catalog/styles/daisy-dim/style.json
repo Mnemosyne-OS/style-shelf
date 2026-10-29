@@ -1,0 +1,55 @@
+{
+  "id": "daisy-dim",
+  "kind": "style",
+  "title": {
+    "en": "Dim (daisyUI)",
+    "fr": "Dim (daisyUI)",
+    "es": "Dim (daisyUI)"
+  },
+  "license": "MIT",
+  "author": "daisyUI (Pouya Saadeghi and contributors)",
+  "tier": "free",
+  "tags": [
+    "dark",
+    "daisyui"
+  ],
+  "manifest": {
+    "id": "daisy-dim",
+    "name": "Dim (daisyUI)",
+    "version": "1.0.0",
+    "author": "daisyUI (Pouya Saadeghi and contributors)",
+    "description": "daisyUI theme \"dim\" (dark), from saadeghi/daisyui packages/daisyui/src/themes/dim.css at bf3bac3a397b, MIT.",
+    "tokens": {
+      "--accent": "#9fe88d",
+      "--accent-dim": "#b7ffa6",
+      "--accent-glow": "rgba(159, 232, 141, 0.16)",
+      "--accent-border": "rgba(159, 232, 141, 0.45)",
+      "--bg-void": "#2a303c",
+      "--bg-surface": "#242933",
+      "--bg-panel": "#242933",
+      "--bg-card": "#242933",
+      "--bg-hover": "rgba(159, 232, 141, 0.08)",
+      "--text-primary": "#b2ccd6",
+      "--text-secondary": "#94aab5",
+      "--text-muted": "#879ba6",
+      "--text-accent": "#9fe88d",
+      "--font-ui": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "16px",
+      "--radius-md": "8px",
+      "--radius-lg": "16px",
+      "--border-subtle": "1px solid #20252e",
+      "--border-accent": "1px solid rgba(159, 232, 141, 0.45)",
+      "--shadow-card": "none",
+      "--shadow-accent": "0 0 22px -6px rgba(159, 232, 141, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#62efbd",
+      "--status-warning": "#efd057",
+      "--status-overload": "#ffae9b"
+    }
+  }
+}

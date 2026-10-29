@@ -1,0 +1,16 @@
+{
+  "id": "btn-glow",
+  "kind": "button",
+  "title": {
+    "en": "Glow edge",
+    "fr": "Bord lumineux",
+    "es": "Borde luminoso"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "glow"
+  ]
+}

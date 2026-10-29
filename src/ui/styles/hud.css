@@ -1,0 +1,306 @@
+/*
+ * Style Shelf — the HUD (style-cartouche §1, the house style since 27/10).
+ *
+ *   ✦ its own night ground, whatever the host's theme; panels and buttons are
+ *     glass made of light with lit corner brackets, square corners;
+ *   ✦ cyan is the HUD's light, green is what is chosen, amber a licence or a
+ *     price, red an error;
+ *   ✦ nothing moves at rest: the only animation is the host badge while it
+ *     searches, and the previews play under the pointer (preview/previewDoc);
+ *   ✦ system fonts only, no font request.
+ */
+.hud-root {
+  --h-bg: #03060c;
+  --h-holo: #5fe3ff;
+  --h-holo-dim: rgba(95, 227, 255, 0.32);
+  --h-holo-faint: rgba(95, 227, 255, 0.14);
+  --h-chosen: #3fd68a;
+  --h-gold: #ffbe5c;
+  --h-rec: #ff7070;
+  --h-text: #e6f4fb;
+  --h-muted: #8fa8ba;
+  --glass-fill: color-mix(in srgb, #fff 6%, transparent);
+  --glass-blur: blur(16px) saturate(170%);
+  --h-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif;
+  --h-mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  color: var(--h-text);
+  font-family: var(--h-sans);
+  background: radial-gradient(ellipse 70% 45% at 50% 0%, rgba(95, 227, 255, 0.09), transparent 70%), var(--h-bg);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; }
+body { background: #03060c; }
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 16px 24px;
+}
+
+/* Corner brackets: eight 1 px strokes drawn by gradients over the glass, no extra markup. */
+.hud, button, .chip-tile {
+  --h-c: var(--h-holo-dim);
+  border: 1px solid var(--h-holo-faint);
+  border-radius: 0;
+  backdrop-filter: var(--glass-blur);
+  background:
+    linear-gradient(var(--h-c), var(--h-c)) 0 0 / 12px 1px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 0 0 / 1px 12px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 100% 0 / 12px 1px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 100% 0 / 1px 12px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 0 100% / 12px 1px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 0 100% / 1px 12px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 100% 100% / 12px 1px no-repeat,
+    linear-gradient(var(--h-c), var(--h-c)) 100% 100% / 1px 12px no-repeat,
+    var(--glass-fill);
+}
+
+button {
+  font: 500 13px/1 var(--h-sans);
+  color: var(--h-text);
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+button:hover:not(:disabled) { --h-c: var(--h-holo); border-color: var(--h-holo-dim); }
+button:focus-visible { outline: 1px solid var(--h-holo); outline-offset: 3px; }
+button:disabled { opacity: 0.45; cursor: default; }
+button.primary {
+  --h-c: var(--h-chosen);
+  --glass-fill: rgba(63, 214, 138, 0.14);
+  border-color: rgba(63, 214, 138, 0.5);
+}
+
+.lab {
+  font-family: var(--h-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--h-muted);
+}
+
+/* What is chosen is green, with a ✓ in the corner (style-cartouche §2). */
+.chosen {
+  --h-c: var(--h-chosen);
+  --glass-fill: rgba(63, 214, 138, 0.12);
+  border-color: rgba(63, 214, 138, 0.65);
+  box-shadow: 0 0 24px -8px var(--h-chosen);
+}
+.chip-tile, .tile { position: relative; }
+.chip-tile.chosen::after, .tile.chosen::after {
+  content: '✓';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--h-chosen);
+  color: #03130a;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+/* ── Top bar ───────────────────────────────────────────────────────────── */
+.topbar { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand { color: var(--h-holo); font-size: 12px; letter-spacing: 0.28em; }
+.topbar .host-badge { margin-right: auto; }
+.host-badge { display: inline-flex; align-items: center; gap: 6px; font: 11px/1 var(--h-mono); color: var(--h-muted); white-space: nowrap; }
+.host-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--h-muted); }
+.host-badge.mnemosyne .dot { background: var(--h-chosen); box-shadow: 0 0 10px var(--h-chosen); }
+.host-badge.pending .dot { background: var(--h-holo); animation: ss-search 1.2s ease-in-out infinite; }
+@keyframes ss-search { 50% { opacity: 0.25; } }
+.cart-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; }
+.cart-btn .count { font: 600 12px/1 var(--h-mono); color: var(--h-holo); }
+
+/* ── Toolbar: kinds with their counts, then the three tile sizes ───────── */
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.kinds { display: flex; gap: 8px; overflow-x: auto; min-width: 0; max-width: 100%; padding: 8px 8px 4px 0; scrollbar-width: thin; }
+.chip-tile { flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; }
+.chip-tile .n { color: var(--h-holo); letter-spacing: 0.08em; }
+/* Fields, chips and segments: the thin edge alone. */
+.segmented { display: inline-flex; border: 1px solid var(--h-holo-faint); background: rgba(95, 227, 255, 0.04); flex: none; }
+.segmented .icon-btn { border: 0; background: none; backdrop-filter: none; padding: 8px 10px; color: var(--h-muted); }
+.segmented .icon-btn.chosen { color: var(--h-chosen); background: rgba(63, 214, 138, 0.12); box-shadow: none; }
+.icon-btn { display: inline-grid; place-items: center; padding: 8px; }
+.icon-btn.small { padding: 5px; }
+
+/* ── The grid: all the width, three sizes (style-cartouche §4) ─────────── */
+.grid { display: grid; gap: 14px; }
+.grid.size-small { grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); }
+.grid.size-medium { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+.grid.size-large { grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); }
+
+.tile { display: flex; flex-direction: column; min-width: 0; padding: 6px; }
+.preview { display: block; width: 100%; border: 1px solid var(--h-holo-faint); background: var(--h-bg); }
+/* A preview waiting for its new style: the old drawing dimmed under a loader (doc 186 §14). */
+.preview-wrap { position: relative; }
+.preview { transition: opacity 160ms ease; }
+.preview.stale { opacity: 0.35; }
+.preview-loading {
+  position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 8px;
+  pointer-events: none; color: var(--h-holo);
+}
+.preview-loading .ring {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--h-holo-faint); border-top-color: var(--h-holo);
+  animation: ss-ring 0.8s linear infinite;
+}
+@keyframes ss-ring { to { transform: rotate(360deg); } }
+.size-small .preview-loading .lab { display: none; }
+.repaint { margin: 0; color: var(--h-holo); }
+.icon-btn.fav.chosen svg { fill: currentColor; }
+.size-small .preview { height: 120px; }
+.size-medium .preview { height: 180px; }
+.size-large .preview { height: 260px; }
+.tile-foot { display: flex; align-items: center; gap: 10px; padding: 8px 4px 2px; min-width: 0; }
+.tile-meta { display: grid; gap: 4px; min-width: 0; margin-right: auto; }
+.tile-name { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile-tags { display: inline-flex; gap: 6px; flex: none; }
+.size-small .tile-tags, .size-small .tile-meta .lab { display: none; }
+/* Small tiles: the name takes its own line, the buttons (atelier, star, cart) the next one. */
+.size-small .tile-foot { flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.size-small .tile-meta { flex: 1 0 100%; margin-right: 0; }
+.badge { font: 10px/1 var(--h-mono); letter-spacing: 0.08em; padding: 4px 6px; border: 1px solid currentColor; white-space: nowrap; }
+.badge.gold { color: var(--h-gold); }
+
+/* ── Notices ───────────────────────────────────────────────────────────── */
+.notices { display: grid; gap: 6px; }
+.error { color: var(--h-rec); font-size: 13px; margin: 0; }
+.notice { color: var(--h-gold); font-size: 13px; margin: 0; }
+.muted { color: var(--h-muted); font-size: 13px; margin: 0; }
+.empty { text-align: center; padding: 40px 0; }
+.todo { margin: 0; color: var(--h-gold); font-size: 14px; }
+
+/* ── The cart: a panel on the right, the whole screen on a phone ───────── */
+.cart-veil { position: fixed; inset: 0; z-index: 10; background: rgba(1, 3, 7, 0.55); display: flex; justify-content: flex-end; }
+.cart {
+  width: min(100%, 420px);
+  height: 100%;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  --glass-fill: rgba(7, 16, 26, 0.92);
+}
+.cart-head { display: flex; align-items: center; justify-content: space-between; }
+.cart-sec { display: grid; gap: 8px; }
+.cart-sec h2 { margin: 0; display: flex; align-items: center; gap: 8px; }
+.num { font: 600 11px/1 var(--h-mono); color: var(--h-holo); letter-spacing: 0.1em; }
+.num.done { color: var(--h-chosen); }
+.cart-style { margin: 0; font-size: 16px; }
+.cart-items { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.cart-items li { display: flex; align-items: center; gap: 10px; padding: 6px 8px; border: 1px solid var(--h-holo-faint); min-width: 0; }
+.cart-items .lab { flex: none; width: 82px; overflow: hidden; text-overflow: ellipsis; }
+.theme-save { display: flex; gap: 8px; min-width: 0; }
+.theme-save input { flex: 1; min-width: 0; }
+.themes .theme-meta { display: grid; gap: 2px; flex: 1; min-width: 0; }
+.themes .theme-meta .lab { width: auto; }
+.cart-item-name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; }
+.licenses { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.cart-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.cart-actions button { flex: 1 1 160px; padding: 12px 14px; }
+/* What each button will do, said before the click (doc 186 §17). */
+.cart-explain { display: grid; gap: 8px; padding: 10px 12px; border: 1px solid var(--h-holo-faint); font-size: 13px; line-height: 1.45; }
+.cart-explain p { margin: 0; }
+.cart-explain strong { color: var(--h-holo); font-weight: 600; }
+.kit-files { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.kit-files li { display: grid; gap: 2px; }
+.kit-files code { font: 12px var(--h-mono); color: var(--h-text); }
+.kit-files span { color: var(--h-muted); }
+.rail { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rail li { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-width: 0; }
+.path { font: 12px var(--h-mono); color: var(--h-text); word-break: break-all; }
+
+.badge.holo { color: var(--h-holo); }
+button.danger { --h-c: var(--h-rec); border-color: rgba(255, 112, 112, 0.6); color: var(--h-rec); }
+.views .icon-btn { padding: 8px 12px; font-size: 12px; }
+input, select, textarea {
+  font: 14px/1.2 var(--h-sans);
+  color: var(--h-text);
+  padding: 8px 10px;
+  border: 1px solid var(--h-holo-faint);
+  border-radius: 0;
+  background: rgba(95, 227, 255, 0.04);
+  min-width: 0;
+}
+input:focus-visible { outline: 1px solid var(--h-holo); outline-offset: 1px; }
+input[type='color'] { padding: 2px; width: 38px; height: 34px; flex: none; cursor: pointer; }
+
+/* ── The atelier (style-cartouche §8): the style in the centre, its token
+   groups as nodes on one side with a line to it, one panel on the other. ── */
+.studio {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  overflow-y: auto;
+  padding: 14px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: radial-gradient(ellipse 70% 45% at 50% 0%, rgba(95, 227, 255, 0.09), transparent 70%), var(--h-bg);
+}
+.studio-bar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; }
+.studio-bar .field { display: grid; gap: 4px; flex: 1 1 180px; min-width: 0; }
+.studio-bar .based { align-self: center; }
+.studio-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.atelier {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr) minmax(260px, 340px);
+  gap: 18px;
+  align-items: start;
+}
+.nodes { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.node { position: relative; width: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; text-align: left; padding: 10px 12px; }
+/* The line from a node to the style it sets: lit green on the open node. */
+.node::after { content: ''; position: absolute; top: 50%; right: -19px; width: 18px; height: 1px; background: var(--h-holo-faint); }
+.node.chosen::after { background: var(--h-chosen); }
+.node-val { font: 11px var(--h-mono); color: var(--h-text); max-width: 70px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.swatch { width: 18px; height: 18px; border: 1px solid var(--h-holo-dim); }
+.stage { min-width: 0; }
+.stage .preview { height: min(70vh, 560px); }
+.panel { display: grid; gap: 12px; padding: 14px; min-width: 0; }
+.panel h2 { margin: 0; }
+.token { display: grid; gap: 4px; min-width: 0; }
+.token-inputs { display: flex; gap: 6px; min-width: 0; }
+.token-inputs input[type='text'] { flex: 1; font: 12px var(--h-mono); }
+.issues { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+@media (max-width: 900px) {
+  .atelier { grid-template-columns: 1fr; }
+  .stage { order: -1; }
+  .stage .preview { height: 340px; }
+  .nodes { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .node::after { display: none; }
+}
+
+/* ── Whole-page preview (doc 186 §15) ──────────────────────────────── */
+.page-view .page-style { font-size: 15px; color: var(--h-text); }
+.page-body { flex: 1; min-height: 0; display: grid; gap: 14px; }
+.page-body.with-brief { grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); }
+.page-frame { display: block; width: 100%; height: calc(100vh - 110px); min-height: 360px; border: 1px solid var(--h-holo-faint); background: var(--h-bg); }
+.brief { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 8px; padding: 12px; min-width: 0; max-height: calc(100vh - 110px); }
+.brief-text { margin: 0; overflow: auto; white-space: pre-wrap; word-break: break-word; font: 12px/1.5 var(--h-mono); color: var(--h-text); }
+@media (max-width: 900px) {
+  .page-body.with-brief { grid-template-columns: 1fr; }
+  .page-frame { height: 60vh; }
+  .brief { max-height: 50vh; }
+}
+
+/* ── Contributions ─────────────────────────────────────────────────────── */
+.contrib { display: grid; gap: 10px; }
+.contrib-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.contrib-list li { display: flex; align-items: center; gap: 12px; padding: 10px 12px; min-width: 0; flex-wrap: wrap; }
+.contrib-title { flex: 1 1 200px; min-width: 0; font-size: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

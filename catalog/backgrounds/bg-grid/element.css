@@ -1,0 +1,7 @@
+.ss-bg-grid {
+  background-color: var(--bg-void);
+  background-image:
+    linear-gradient(var(--accent-glow) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-glow) 1px, transparent 1px);
+  background-size: 28px 28px;
+}

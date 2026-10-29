@@ -1,0 +1,15 @@
+.ss-card-media {
+  width: min(100%, 260px);
+  overflow: hidden;
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-ui);
+  transition: transform var(--transition-normal);
+}
+.ss-card-media:hover { transform: translateY(-2px); }
+.ss-card-media__cover { height: 90px; background: linear-gradient(135deg, var(--accent-glow), var(--bg-surface)); }
+.ss-card-media__body { padding: var(--space-md); }
+.ss-card-media__title { margin: 0 0 var(--space-sm); font-size: 15px; color: var(--text-primary); }
+.ss-card-media__tag { display: inline-block; padding: 3px 8px; border-radius: 999px; background: var(--accent-glow); color: var(--text-accent); font: 11px/1.2 var(--font-mono); }

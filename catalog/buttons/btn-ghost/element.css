@@ -1,0 +1,12 @@
+.ss-btn-ghost {
+  font: 600 14px/1 var(--font-ui);
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-accent);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-accent);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.ss-btn-ghost:hover { background: var(--bg-hover); }
+.ss-btn-ghost:focus-visible { outline: 2px solid var(--accent-border); outline-offset: 2px; }

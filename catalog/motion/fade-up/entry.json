@@ -1,0 +1,16 @@
+{
+  "id": "fade-up",
+  "kind": "motion",
+  "title": {
+    "en": "Fade up",
+    "fr": "Apparition montante",
+    "es": "Aparición ascendente"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "motion",
+    "entrance"
+  ]
+}

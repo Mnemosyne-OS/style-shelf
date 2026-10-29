@@ -1,0 +1,13 @@
+.ss-menu-sidebar {
+  width: 200px; padding: var(--space-sm);
+  border: var(--border-subtle); border-radius: var(--radius-lg);
+  background: var(--bg-surface); font-family: var(--font-ui);
+}
+.ss-menu-sidebar__title { margin: 4px 10px 8px; font: 11px/1 var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.ss-menu-sidebar__item {
+  display: block; padding: 8px 10px; border-radius: var(--radius-sm);
+  color: var(--text-secondary); font-size: 13px; text-decoration: none;
+  transition: background var(--transition-fast);
+}
+.ss-menu-sidebar__item:hover { background: var(--bg-hover); color: var(--text-primary); }
+.ss-menu-sidebar__item[aria-current] { background: var(--accent-glow); color: var(--text-accent); font-weight: 600; box-shadow: inset 3px 0 0 var(--accent); }

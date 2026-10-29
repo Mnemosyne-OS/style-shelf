@@ -1,0 +1,55 @@
+{
+  "id": "skeleton-rocket",
+  "kind": "style",
+  "title": {
+    "en": "Rocket (Skeleton)",
+    "fr": "Rocket (Skeleton)",
+    "es": "Rocket (Skeleton)"
+  },
+  "license": "MIT",
+  "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+  "tier": "free",
+  "tags": [
+    "light",
+    "skeleton"
+  ],
+  "manifest": {
+    "id": "skeleton-rocket",
+    "name": "Rocket (Skeleton)",
+    "version": "1.0.0",
+    "author": "Skeleton Labs (via kyrolabs/skeleton-theme)",
+    "description": "Skeleton theme \"rocket\" (light), from kyrolabs/skeleton-theme src/themes/theme-rocket.css at d40eb56c0477, MIT. Changed: accent lightness moved from 71% to 50% (oklch) so text on it reads at 4.5:1. Changed: success, warning lightness moved so they read as text at 4.5:1.",
+    "tokens": {
+      "--accent": "#056f82",
+      "--accent-dim": "#035969",
+      "--accent-glow": "rgba(5, 111, 130, 0.16)",
+      "--accent-border": "rgba(5, 111, 130, 0.45)",
+      "--bg-void": "#e8eaee",
+      "--bg-surface": "#e0e3e8",
+      "--bg-panel": "#e0e3e8",
+      "--bg-card": "#e0e3e8",
+      "--bg-hover": "rgba(5, 111, 130, 0.08)",
+      "--text-primary": "#035968",
+      "--text-secondary": "#316c7a",
+      "--text-muted": "#316c7a",
+      "--text-accent": "#056f82",
+      "--font-ui": "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif",
+      "--font-mono": "ui-monospace, 'Cascadia Mono', 'SF Mono', Consolas, monospace",
+      "--space-sm": "8px",
+      "--space-md": "14px",
+      "--space-lg": "22px",
+      "--radius-sm": "0px",
+      "--radius-md": "0px",
+      "--radius-lg": "0px",
+      "--border-subtle": "0px solid #d8dce2",
+      "--border-accent": "0px solid rgba(5, 111, 130, 0.45)",
+      "--shadow-card": "0 8px 22px -12px rgba(0, 0, 0, 0.28)",
+      "--shadow-accent": "0 0 22px -6px rgba(5, 111, 130, 0.5)",
+      "--transition-fast": "120ms ease",
+      "--transition-normal": "240ms ease",
+      "--status-active": "#267403",
+      "--status-warning": "#7e6106",
+      "--status-overload": "#b52c55"
+    }
+  }
+}
