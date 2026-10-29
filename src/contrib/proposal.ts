@@ -11,6 +11,7 @@
  * @module contrib/proposal
  */
 import { PERSONAL_PREFIX, toManifest, type PersonalStyle } from '../personal/personalModel';
+import { creditedHandle } from '../lib/github';
 import type { ContribRepo } from './contribConfig';
 
 /** Beyond this, browsers and GitHub start cutting the address: say it, never send half a file. */
@@ -35,6 +36,8 @@ export function proposalFile(p: PersonalStyle): { path: string; content: string 
     author,
     tier: 'free',
     tags: ['community'],
+    // An author given as a GitHub handle is credited on the tile, picture and link.
+    ...(creditedHandle(author) ? { github: creditedHandle(author) } : {}),
     manifest,
   };
   return { path: `styles/${id}/style.json`, content: `${JSON.stringify(entry, null, 2)}\n` };

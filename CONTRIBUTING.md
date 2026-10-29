@@ -6,8 +6,9 @@ under `catalog/`. A pull request adds that folder.
 ## The quickest way: a style from the app
 
 1. Open Style Shelf and press **Adapt** on the style closest to yours.
-2. Change the tokens in the atelier, give the style a name and your GitHub
-   handle as author.
+2. Change the tokens in the atelier and give the style a name. Write your
+   GitHub username with an `@` as author, such as `@octocat`. The tile then
+   shows your GitHub picture and links to your profile.
 3. Press **Propose**. GitHub opens with the file already written. Commit it to
    a new branch and open the pull request.
 
@@ -30,7 +31,8 @@ The `id` uses lowercase words joined by dashes. It matches the folder name and
 is unique across the whole catalogue.
 
 `entry.json` and `style.json` carry a title in English, French and Spanish, a
-licence, an author and `"tier": "free"`.
+licence, an author and `"tier": "free"`. Add `"github": "<your username>"` to
+be credited on the tile with your GitHub picture and a link to your profile.
 
 ## The rules the checks enforce
 

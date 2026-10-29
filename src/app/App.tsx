@@ -418,7 +418,7 @@ export function App({
       ) : previewStyle && shown.length > 0 ? (
         <main className={`grid size-${size}`}>
           {shown.map((e) => (
-            <Tile key={e.id} entry={e} previewStyle={previewStyle} inCart={inCart(cart, e.id)} favorite={favSet.has(e.id)} lang={lang} w={w} onToggle={onToggle} onFavorite={onFavorite} onAtelier={onAtelier} />
+            <Tile key={e.id} entry={e} previewStyle={previewStyle} inCart={inCart(cart, e.id)} favorite={favSet.has(e.id)} lang={lang} w={w} onToggle={onToggle} onFavorite={onFavorite} onOpenLink={onOpenContribution} onAtelier={onAtelier} />
           ))}
         </main>
       ) : (

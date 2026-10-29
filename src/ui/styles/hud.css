@@ -157,6 +157,19 @@ button.primary {
 .size-small .preview-loading .lab { display: none; }
 .repaint { margin: 0; color: var(--h-holo); }
 .icon-btn.fav.chosen svg { fill: currentColor; }
+/* Who proposed an entry (doc 186 §21): over the top-left corner of the preview. */
+.credit {
+  position: absolute; top: 6px; left: 6px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 6px; max-width: calc(100% - 12px);
+  padding: 2px 8px 2px 2px; border: 1px solid var(--h-holo-faint); border-radius: 999px;
+  background: var(--h-bg); color: var(--h-text); font: 11px/1 var(--h-mono); text-decoration: none;
+}
+.credit:hover, .credit:focus-visible { border-color: var(--h-holo); color: var(--h-holo); }
+.credit img, .credit-initial { width: 20px; height: 20px; border-radius: 50%; flex: none; }
+.credit-initial { display: grid; place-items: center; background: var(--h-holo-faint); color: var(--h-holo); font-weight: 700; }
+.credit-handle { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.size-small .credit-handle { display: none; }
+.size-small .credit { padding: 2px; }
 .size-small .preview { height: 120px; }
 .size-medium .preview { height: 180px; }
 .size-large .preview { height: 260px; }

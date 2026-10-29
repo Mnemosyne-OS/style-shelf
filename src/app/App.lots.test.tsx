@@ -180,6 +180,22 @@ describe('lot 2: personal styles', () => {
     expect(screen.getByText('Themes restored from Mnemosyne OS: 1')).toBeInTheDocument();
   });
 
+  it('credits the GitHub account that proposed an entry: its picture, its handle, its profile', () => {
+    const openUrl = vi.fn(async (_url: string, _inHost: boolean): Promise<string | null> => null);
+    const credited = { ...base, id: 'credited', kind: 'button' as const, github: 'octocat', title: T('Credited'), css: '.ss-credited {}', html: '<b class="ss-credited">c</b>' };
+    render(<App catalog={{ ...catalog, entries: [...catalog.entries, credited] }} detectDeps={standalone} mirror={noMirror} openUrl={openUrl} />);
+    const link = within(tile('credited')).getByRole('link', { name: 'Proposed by @octocat on GitHub' });
+    expect(link).toHaveAttribute('href', 'https://github.com/octocat');
+    expect(link.querySelector('img')).toHaveAttribute('src', 'https://github.com/octocat.png?size=40');
+    expect(within(tile('btn')).queryByRole('link')).not.toBeInTheDocument();
+    fireEvent.click(link);
+    expect(openUrl).toHaveBeenCalledWith('https://github.com/octocat', false);
+    // A picture that does not load leaves the initial.
+    fireEvent.error(link.querySelector('img')!);
+    expect(link.querySelector('img')).toBeNull();
+    expect(link).toHaveTextContent('O@octocat');
+  });
+
   it('never overwrites a local copy with the host one', async () => {
     localStorage.setItem(PERSONAL_KEY, JSON.stringify([{ id: 'my-local', name: 'Local', author: '', basedOn: 'hud-night', license: 'MIT', baseAuthor: 'm', updatedAt: 'x', tokens: TOKENS }]));
     const other = JSON.stringify([{ id: 'my-other', name: 'Other', author: '', basedOn: 'hud-night', license: 'MIT', baseAuthor: 'm', updatedAt: 'x', tokens: TOKENS }]);
@@ -226,7 +242,7 @@ describe('lot 3: contributions and proposals', () => {
     await act(async () => { fireEvent.click(within(studio).getByRole('button', { name: 'Propose' })); });
     expect(within(studio).getByRole('alert')).toHaveTextContent('An author is needed to propose');
     expect(openUrl).not.toHaveBeenCalled();
-    fireEvent.change(within(studio).getByPlaceholderText('Name or GitHub handle'), { target: { value: 'ana' } });
+    fireEvent.change(within(studio).getByPlaceholderText('Name, or @handle to be credited with your GitHub picture'), { target: { value: 'ana' } });
     await act(async () => { fireEvent.click(within(studio).getByRole('button', { name: 'Propose' })); });
     const url = new URL(openUrl.mock.calls[0][0]);
     expect(url.pathname).toBe('/Mnemosyne-OS/style-shelf/new/main');
@@ -240,7 +256,7 @@ describe('a blocked popup is never a dead button', () => {
     render(<App catalog={catalog} detectDeps={standalone} mirror={noMirror} contribRepo={REPO} openUrl={openUrl} />);
     fireEvent.click(within(tile('hud-night')).getByRole('button', { name: 'Adapt HUD night' }));
     const studio = screen.getByRole('dialog', { name: 'Atelier' });
-    fireEvent.change(within(studio).getByPlaceholderText('Name or GitHub handle'), { target: { value: 'ana' } });
+    fireEvent.change(within(studio).getByPlaceholderText('Name, or @handle to be credited with your GitHub picture'), { target: { value: 'ana' } });
     await act(async () => { fireEvent.click(within(studio).getByRole('button', { name: 'Propose' })); });
     const link = within(studio).getByRole('link', { name: 'Open on GitHub' });
     expect(link).toHaveAttribute('href', openUrl.mock.calls[0][0]);

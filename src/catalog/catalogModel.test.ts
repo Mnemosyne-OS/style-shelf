@@ -115,4 +115,14 @@ describe('parseCatalog', () => {
     });
     expect(c.refused.map((r) => r.reason).sort()).toEqual(['homepage: not an https address', 'packages: not a list of npm packages']);
   });
+
+  it('keeps a GitHub handle to credit, and refuses one that is not a username', () => {
+    const c = parseCatalog({
+      'catalog/styles/ok/style.json': style('ok', { github: 'octo-cat' }),
+      'catalog/styles/at/style.json': style('at', { github: '@octocat' }),
+      'catalog/styles/url/style.json': style('url', { github: 'https://evil.example/x' }),
+    });
+    expect(c.entries.map((e) => [e.id, e.github])).toEqual([['ok', 'octo-cat']]);
+    expect(c.refused.map((r) => r.reason)).toEqual(['github "@octocat" is not a GitHub username', 'github "https://evil.example/x" is not a GitHub username']);
+  });
 });

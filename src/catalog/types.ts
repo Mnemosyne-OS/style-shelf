@@ -47,6 +47,8 @@ interface EntryBase {
   author: string;
   tier: Tier;
   tags: string[];
+  /** The GitHub account of whoever proposed it: its picture and link show on the tile (doc 186 §21). */
+  github?: string;
 }
 
 /** A style: a design-sdk skin manifest, the tokens every element reads. */

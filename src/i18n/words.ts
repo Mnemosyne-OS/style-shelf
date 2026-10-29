@@ -26,7 +26,7 @@ const EN = {
     add: 'Add {name} to the cart', remove: 'Take {name} out of the cart', choose: 'Choose the style {name}', chosen: 'Chosen style',
     premium: 'Premium', preview: 'Preview of {name}', hover: 'Hover to play',
     adapt: 'Adapt {name}', edit: 'Edit {name}', personal: 'Mine', loading: 'Loading',
-    favorite: 'Add {name} to the favourites', unfavorite: 'Take {name} out of the favourites',
+    proposedBy: 'Proposed by {name} on GitHub', favorite: 'Add {name} to the favourites', unfavorite: 'Take {name} out of the favourites',
     repainting: 'Applying the style, previews left: {n}',
   },
   cart: {
@@ -43,7 +43,7 @@ const EN = {
     empty: 'Nothing here',
   },
   studio: {
-    title: 'Atelier', name: 'Name', author: 'Author', authorHint: 'Name or GitHub handle', basedOn: 'from {name}',
+    title: 'Atelier', name: 'Name', author: 'Author', authorHint: 'Name, or @handle to be credited with your GitHub picture', basedOn: 'from {name}',
     keep: 'Keep', export: 'Export', propose: 'Propose', delete: 'Delete', confirmDelete: 'Confirm delete', close: 'Close the atelier',
     groupsLabel: 'Token groups', newName: 'My {name}',
     groups: { accent: 'Accent', grounds: 'Grounds', text: 'Text', shapes: 'Shapes', depth: 'Depth', motion: 'Motion', status: 'Status' },
@@ -109,7 +109,7 @@ const FR: Dict = {
     add: 'Ajouter {name} au panier', remove: 'Retirer {name} du panier', choose: 'Choisir le style {name}', chosen: 'Style choisi',
     premium: 'Premium', preview: 'Aperçu de {name}', hover: 'Survoler pour jouer',
     adapt: 'Adapter {name}', edit: 'Modifier {name}', personal: 'Perso', loading: 'Chargement',
-    favorite: 'Ajouter {name} aux favoris', unfavorite: 'Retirer {name} des favoris',
+    proposedBy: 'Proposé par {name} sur GitHub', favorite: 'Ajouter {name} aux favoris', unfavorite: 'Retirer {name} des favoris',
     repainting: 'Application du style, aperçus restants : {n}',
   },
   cart: {
@@ -126,7 +126,7 @@ const FR: Dict = {
     empty: 'Rien ici',
   },
   studio: {
-    title: 'Atelier', name: 'Nom', author: 'Auteur', authorHint: 'Nom ou pseudo GitHub', basedOn: 'à partir de {name}',
+    title: 'Atelier', name: 'Nom', author: 'Auteur', authorHint: 'Nom, ou @pseudo pour être crédité avec sa photo GitHub', basedOn: 'à partir de {name}',
     keep: 'Garder', export: 'Exporter', propose: 'Proposer', delete: 'Supprimer', confirmDelete: 'Confirmer', close: "Fermer l'atelier",
     groupsLabel: 'Groupes de jetons', newName: 'Mon {name}',
     groups: { accent: 'Accent', grounds: 'Fonds', text: 'Texte', shapes: 'Formes', depth: 'Relief', motion: 'Mouvement', status: 'Statuts' },
@@ -190,7 +190,7 @@ const ES: Dict = {
     add: 'Añadir {name} al carrito', remove: 'Quitar {name} del carrito', choose: 'Elegir el estilo {name}', chosen: 'Estilo elegido',
     premium: 'Premium', preview: 'Vista previa de {name}', hover: 'Pasar el puntero para reproducir',
     adapt: 'Adaptar {name}', edit: 'Editar {name}', personal: 'Mío', loading: 'Cargando',
-    favorite: 'Añadir {name} a favoritos', unfavorite: 'Quitar {name} de favoritos',
+    proposedBy: 'Propuesto por {name} en GitHub', favorite: 'Añadir {name} a favoritos', unfavorite: 'Quitar {name} de favoritos',
     repainting: 'Aplicando el estilo, vistas previas restantes: {n}',
   },
   cart: {
@@ -207,7 +207,7 @@ const ES: Dict = {
     empty: 'Nada aquí',
   },
   studio: {
-    title: 'Taller', name: 'Nombre', author: 'Autor', authorHint: 'Nombre o usuario de GitHub', basedOn: 'a partir de {name}',
+    title: 'Taller', name: 'Nombre', author: 'Autor', authorHint: 'Nombre, o @usuario para aparecer con la foto de GitHub', basedOn: 'a partir de {name}',
     keep: 'Guardar', export: 'Exportar', propose: 'Proponer', delete: 'Eliminar', confirmDelete: 'Confirmar', close: 'Cerrar el taller',
     groupsLabel: 'Grupos de tokens', newName: 'Mi {name}',
     groups: { accent: 'Acento', grounds: 'Fondos', text: 'Texto', shapes: 'Formas', depth: 'Relieve', motion: 'Movimiento', status: 'Estados' },

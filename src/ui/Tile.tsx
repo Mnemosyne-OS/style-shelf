@@ -19,6 +19,7 @@ import type { CatalogEntry, StyleEntry } from '../catalog/types';
 import { fill, titleIn, type Dict } from '../i18n/words';
 import { previewDoc } from '../preview/previewDoc';
 import { repaintQueue } from '../preview/repaintQueue';
+import { Credit } from './Credit';
 import { Icon } from './Icon';
 
 interface TileProps {
@@ -30,6 +31,8 @@ interface TileProps {
   w: Dict;
   onToggle: (entry: CatalogEntry) => void;
   onFavorite: (id: string) => void;
+  /** Opens an outside address (a contributor's profile), in the browser of the OS inside Mnemosyne. */
+  onOpenLink: (url: string) => void;
   /** On a style: open the atelier (a new personal style from a shipped one, or the personal one itself). */
   onAtelier?: (entry: StyleEntry) => void;
 }
@@ -37,7 +40,7 @@ interface TileProps {
 /** A frame that never says it loaded stops showing the loader after this long. */
 const LOAD_TIMEOUT_MS = 15_000;
 
-export const Tile = memo(function Tile({ entry, previewStyle, inCart, favorite, lang, w, onToggle, onFavorite, onAtelier }: TileProps) {
+export const Tile = memo(function Tile({ entry, previewStyle, inCart, favorite, lang, w, onToggle, onFavorite, onOpenLink, onAtelier }: TileProps) {
   const name = titleIn(entry.title, lang);
   const doc = useMemo(() => previewDoc(previewStyle, entry, name), [previewStyle, entry, name]);
   // The page the frame shows, and the last page it said it loaded.
@@ -88,6 +91,7 @@ export const Tile = memo(function Tile({ entry, previewStyle, inCart, favorite, 
             <span className="lab">{w.tile.loading}</span>
           </div>
         )}
+        {entry.github && <Credit handle={entry.github} w={w} onOpen={onOpenLink} />}
       </div>
       <footer className="tile-foot">
         <div className="tile-meta">

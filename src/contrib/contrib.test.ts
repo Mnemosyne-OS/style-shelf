@@ -31,6 +31,13 @@ describe('a proposal by pull request', () => {
     expect(url.searchParams.get('value')).toBe(proposalFile(mine).content);
   });
 
+  it('credits an author written as @handle with a github field, and a plain name with none', () => {
+    const credited = JSON.parse(proposalFile({ ...mine, author: '@octocat' }).content);
+    expect(credited).toMatchObject({ author: '@octocat', github: 'octocat' });
+    expect(parseCatalog({ [`catalog/${proposalFile({ ...mine, author: '@octocat' }).path}`]: proposalFile({ ...mine, author: '@octocat' }).content }).refused).toEqual([]);
+    expect(JSON.parse(proposalFile(mine).content).github).toBeUndefined();
+  });
+
   it('asks for an author first: the catalogue refuses an entry without one', () => {
     expect(proposalUrl(REPO, { ...mine, author: ' ' })).toEqual({ ok: false, error: 'NO_AUTHOR' });
   });

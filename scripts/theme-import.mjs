@@ -248,6 +248,7 @@ function daisy(file, text) {
     upstream: 'saadeghi/daisyui',
     path: `packages/daisyui/src/themes/${file}`,
     author: 'daisyUI (Pouya Saadeghi and contributors)',
+    github: 'saadeghi',
     scheme: v['color-scheme'],
     source: {
       ground: col('--color-base-100'),
@@ -270,6 +271,18 @@ function daisy(file, text) {
 function skeletonAuthor(text) {
   const m = /made by GitHub user (@[\w-]+)/.exec(text);
   return m ? `${m[1]} for the Skeleton community (via kyrolabs/skeleton-theme)` : 'Skeleton Labs (via kyrolabs/skeleton-theme)';
+}
+
+/**
+ * The account to credit on the tile: the contest author's when it still exists,
+ * Skeleton Labs otherwise. `rcgy` answered 404 on 2026-10-29: the theme keeps the
+ * name as author, and gets no picture or link that would lead to an empty page.
+ */
+const GONE_ACCOUNTS = new Set(['rcgy']);
+function skeletonGithub(text) {
+  const handle = /made by GitHub user @([\w-]+)/.exec(text)?.[1];
+  if (!handle) return 'skeletonlabs';
+  return GONE_ACCOUNTS.has(handle) ? undefined : handle;
 }
 
 /** Skeleton: `R G B` triplets, a 50-900 ramp per colour, read here in light mode. */
@@ -296,6 +309,7 @@ function skeleton(file, text) {
     upstream: 'kyrolabs/skeleton-theme',
     path: `src/themes/${file}`,
     author: skeletonAuthor(text),
+    github: skeletonGithub(text),
     scheme: 'light',
     source: {
       ground: col('--color-surface-50'),
@@ -345,6 +359,8 @@ for (const file of files) {
     title: { en: title, fr: title, es: title },
     license: 'MIT',
     author: t.author,
+    // Credited on the tile: picture and link to the account (doc 186 §21).
+    github: t.github,
     tier: 'free',
     tags: [t.scheme === 'dark' ? 'dark' : 'light', pack === 'daisy' ? 'daisyui' : 'skeleton'],
     manifest: { id, name: title, version: '1.0.0', author: t.author, description, tokens: made.tokens },

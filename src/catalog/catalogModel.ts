@@ -12,6 +12,7 @@
  * @module catalog/catalogModel
  */
 import { validateSkinManifest, type SkinManifest } from '@mnemosyne_os/design-sdk';
+import { githubHandle } from '../lib/github';
 import {
   ELEMENT_KINDS,
   ENTRY_KINDS,
@@ -51,7 +52,7 @@ function readTitle(v: unknown): Title | string {
 }
 
 /** The fields every entry carries, or the reason they cannot be read. */
-function readBase(raw: Raw, id: string, kind: EntryKind): { title: Title; license: string; author: string; tier: Tier; tags: string[] } | string {
+function readBase(raw: Raw, id: string, kind: EntryKind): { title: Title; license: string; author: string; tier: Tier; tags: string[]; github?: string } | string {
   if (raw.id !== id) return `id "${String(raw.id)}" is not its folder "${id}"`;
   if (raw.kind !== kind) return `kind "${String(raw.kind)}" is not its folder's "${kind}"`;
   const title = readTitle(raw.title);
@@ -61,7 +62,14 @@ function readBase(raw: Raw, id: string, kind: EntryKind): { title: Title; licens
   if (raw.tier !== 'free' && raw.tier !== 'premium') return `tier "${String(raw.tier)}" is neither free nor premium`;
   const tags = raw.tags === undefined ? [] : raw.tags;
   if (!Array.isArray(tags) || tags.some((t) => typeof t !== 'string')) return 'tags: not a list of words';
-  return { title, license: raw.license, author: raw.author, tier: raw.tier, tags: tags as string[] };
+  // A credit links to a profile and loads its picture: only a real GitHub handle.
+  let github: string | undefined;
+  if (raw.github !== undefined) {
+    const handle = typeof raw.github === 'string' ? githubHandle(raw.github) : null;
+    if (!handle || handle !== raw.github) return `github "${String(raw.github)}" is not a GitHub username`;
+    github = handle;
+  }
+  return { title, license: raw.license, author: raw.author, tier: raw.tier, tags: tags as string[], ...(github ? { github } : {}) };
 }
 
 function parseJson(text: string | undefined, name: string): Raw | string {
