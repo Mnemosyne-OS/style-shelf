@@ -109,7 +109,8 @@ button.primary {
 }
 
 /* ── Top bar ───────────────────────────────────────────────────────────── */
-.topbar { display: flex; align-items: center; gap: 12px; min-width: 0; }
+/* Wraps on a narrow window: brand, host, views and four buttons do not fit on one line at 375 px. */
+.topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; min-width: 0; }
 .brand { color: var(--h-holo); font-size: 12px; letter-spacing: 0.28em; }
 .topbar .host-badge { margin-right: auto; }
 .host-badge { display: inline-flex; align-items: center; gap: 6px; font: 11px/1 var(--h-mono); color: var(--h-muted); white-space: nowrap; }

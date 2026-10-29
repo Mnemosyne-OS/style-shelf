@@ -1,0 +1,17 @@
+{
+  "id": "btn-elastic",
+  "kind": "button",
+  "title": {
+    "en": "Elastic",
+    "fr": "Élastique",
+    "es": "Elástico"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "wow",
+    "spring"
+  ]
+}

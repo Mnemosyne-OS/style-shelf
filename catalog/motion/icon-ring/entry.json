@@ -1,0 +1,17 @@
+{
+  "id": "icon-ring",
+  "kind": "motion",
+  "title": {
+    "en": "Ringing icon",
+    "fr": "Icône qui sonne",
+    "es": "Icono que suena"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "wow",
+    "icon",
+    "hover"
+  ]
+}

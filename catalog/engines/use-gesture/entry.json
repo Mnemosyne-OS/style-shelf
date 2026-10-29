@@ -1,0 +1,27 @@
+{
+  "id": "use-gesture",
+  "kind": "engine",
+  "title": {
+    "en": "use-gesture",
+    "fr": "use-gesture",
+    "es": "use-gesture"
+  },
+  "license": "MIT",
+  "author": "Poimandres (pmndrs)",
+  "github": "pmndrs",
+  "tier": "free",
+  "tags": [
+    "gesture",
+    "drag"
+  ],
+  "homepage": "https://use-gesture.netlify.app",
+  "packages": {
+    "react": "@use-gesture/react",
+    "any": "@use-gesture/vanilla"
+  },
+  "use": {
+    "en": "Drag, pinch and hover tied to springs: the rubber-band effect.",
+    "fr": "Glisser, pincer et survoler liés aux ressorts : l'effet élastique.",
+    "es": "Arrastrar, pellizcar y pasar el puntero unidos a muelles: el efecto elástico."
+  }
+}

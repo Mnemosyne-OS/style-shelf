@@ -1,0 +1,17 @@
+.ss-btn-elastic {
+  font: 600 14px/1 var(--font-ui);
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--border-accent);
+  border-radius: 999px;
+  background: var(--accent-glow);
+  color: var(--text-accent);
+  cursor: pointer;
+  /* A spring written as a curve: it overshoots, comes back, settles. */
+  transition: transform 650ms linear(0, 0.33 8%, 1.06 22%, 1.19 30%, 1.13 38%, 0.98 52%, 0.95 60%, 1.01 76%, 1);
+}
+.ss-btn-elastic:hover { transform: scale(1.08); }
+.ss-btn-elastic:active { transform: scale(0.92); transition-duration: 120ms; }
+.ss-btn-elastic:focus-visible { outline: 2px solid var(--accent-border); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .ss-btn-elastic { transition: none; }
+}

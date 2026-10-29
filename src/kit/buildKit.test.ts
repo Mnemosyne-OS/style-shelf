@@ -11,6 +11,7 @@ const catalog: Catalog = {
       manifest: { id: 'night', name: 'Night', version: '1.0.0', author: 'Mnemosyne OS', tokens: { '--accent': '#5fe3ff', '--bg-void': '#03060c' } } },
     { id: 'btn-a', kind: 'button', title: T('Solid'), license: 'MIT', author: 'A', tier: 'free', tags: [], css: '.ss-btn-a { color: var(--accent); }', html: '<button class="ss-btn-a">Go</button>' },
     { id: 'spin', kind: 'motion', title: T('Spinner'), license: 'Apache-2.0', author: 'B', tier: 'premium', tags: [], css: '.ss-spin { animation: ss-spin 1s; }', html: '<div class="ss-spin"></div>' },
+    { id: 'motion', kind: 'engine', title: T('Motion'), license: 'MIT', author: 'M', tier: 'free', tags: [], homepage: 'https://motion.dev', packages: { react: 'motion' }, use: T('Springs and gestures.') },
     { id: 'lucide', kind: 'icons', title: T('Lucide'), license: 'ISC', author: 'L', tier: 'free', tags: [], homepage: 'https://lucide.dev', packages: { react: 'lucide-react' }, samples: [], licenseText: null },
   ],
 };
@@ -88,5 +89,14 @@ describe('the agent action cart (doc 149: what the button does)', () => {
     expect(answer.kit).toEqual(built.kit);
     expect(answer.brief).toBe(briefMarkdown(built.kit, { embedFiles: true }));
     expect(answer.writtenTo).toBe('C:\\proj\\style-shelf');
+  });
+
+  it('names an animation engine in the kit and the brief, never as an element, with its licence', () => {
+    const built = buildKit({ styleId: 'night', itemIds: ['motion'] }, catalog, AT);
+    if (!built.ok) throw new Error('not built');
+    expect(built.kit.engines).toEqual([{ id: 'motion', title: T('Motion'), license: 'MIT', author: 'M', homepage: 'https://motion.dev', packages: { react: 'motion' }, use: T('Springs and gestures.') }]);
+    expect(built.kit.elements).toEqual([]);
+    expect(built.kit.licenses).toContain('MIT');
+    expect(built.files[3].content).toContain('## Animation engines\n\n- **Motion** · MIT · https://motion.dev · react: `motion`: Springs and gestures.');
   });
 });

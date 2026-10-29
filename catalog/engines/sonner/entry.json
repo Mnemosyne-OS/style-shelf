@@ -1,0 +1,26 @@
+{
+  "id": "sonner",
+  "kind": "engine",
+  "title": {
+    "en": "Sonner",
+    "fr": "Sonner",
+    "es": "Sonner"
+  },
+  "license": "MIT",
+  "author": "Emil Kowalski",
+  "github": "emilkowalski",
+  "tier": "free",
+  "tags": [
+    "toast",
+    "feedback"
+  ],
+  "homepage": "https://sonner.emilkowal.ski",
+  "packages": {
+    "react": "sonner"
+  },
+  "use": {
+    "en": "Animated toast notifications.",
+    "fr": "Notifications toast animées.",
+    "es": "Notificaciones toast animadas."
+  }
+}

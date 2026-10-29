@@ -1,0 +1,16 @@
+{
+  "id": "card-spotlight",
+  "kind": "card",
+  "title": {
+    "en": "Spotlight",
+    "fr": "Projecteur",
+    "es": "Foco"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "wow",
+    "hover"
+  ]
+}

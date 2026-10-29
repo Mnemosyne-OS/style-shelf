@@ -1,0 +1,23 @@
+.ss-btn-shimmer {
+  position: relative; overflow: hidden;
+  font: 600 14px/1 var(--font-ui);
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-md);
+  background: var(--accent);
+  color: var(--bg-void);
+  cursor: pointer;
+}
+.ss-btn-shimmer::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 30%, color-mix(in srgb, var(--bg-void) 35%, transparent) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: ss-btn-shimmer 2.2s ease-in-out infinite;
+}
+.ss-btn-shimmer:focus-visible { outline: 2px solid var(--accent-border); outline-offset: 2px; }
+@keyframes ss-btn-shimmer {
+  60%, 100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-btn-shimmer::after { animation: none; }
+}

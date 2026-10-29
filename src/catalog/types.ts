@@ -10,7 +10,7 @@ export const ELEMENT_KINDS = ['button', 'card', 'input', 'badge', 'alert', 'tool
 export type ElementKind = (typeof ELEMENT_KINDS)[number];
 
 /** Every kind of entry, in the order the filter shows them. */
-export const ENTRY_KINDS = ['style', ...ELEMENT_KINDS, 'icons'] as const;
+export const ENTRY_KINDS = ['style', ...ELEMENT_KINDS, 'icons', 'engine'] as const;
 export type EntryKind = (typeof ENTRY_KINDS)[number];
 
 /** The catalogue folder of each kind. */
@@ -28,6 +28,7 @@ export const KIND_DIRS: Record<EntryKind, string> = {
   motion: 'motion',
   background: 'backgrounds',
   icons: 'icons',
+  engine: 'engines',
 };
 
 /** Reserved for premium entries (doc 186 §9): read by nothing that refuses. */
@@ -87,7 +88,22 @@ export interface IconPackEntry extends EntryBase {
   licenseText: string | null;
 }
 
-export type CatalogEntry = StyleEntry | ElementEntry | IconPackEntry;
+/**
+ * An animation engine (doc 186 §22): a library that runs JavaScript (springs,
+ * gestures, toasts), so it never draws in a sandboxed preview. Referenced by its
+ * npm packages like an icon pack, with what it is for; the kit tells the agent
+ * to install it.
+ */
+export interface EngineEntry extends EntryBase {
+  kind: 'engine';
+  homepage: string;
+  /** Package name per framework (`react`, `vue`, `any`). */
+  packages: Record<string, string>;
+  /** What the engine is for, in the three languages. */
+  use: Title;
+}
+
+export type CatalogEntry = StyleEntry | ElementEntry | IconPackEntry | EngineEntry;
 
 /** An entry the catalogue could not take, with the reason, never dropped in silence. */
 export interface RefusedEntry {

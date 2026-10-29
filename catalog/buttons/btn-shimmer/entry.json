@@ -1,0 +1,16 @@
+{
+  "id": "btn-shimmer",
+  "kind": "button",
+  "title": {
+    "en": "Shimmer",
+    "fr": "Reflet",
+    "es": "Destello"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "action",
+    "wow"
+  ]
+}

@@ -42,7 +42,8 @@ const LOAD_TIMEOUT_MS = 15_000;
 
 export const Tile = memo(function Tile({ entry, previewStyle, inCart, favorite, lang, w, onToggle, onFavorite, onOpenLink, onAtelier }: TileProps) {
   const name = titleIn(entry.title, lang);
-  const doc = useMemo(() => previewDoc(previewStyle, entry, name), [previewStyle, entry, name]);
+  const detail = entry.kind === 'engine' ? titleIn(entry.use, lang) : '';
+  const doc = useMemo(() => previewDoc(previewStyle, entry, name, detail), [previewStyle, entry, name, detail]);
   // The page the frame shows, and the last page it said it loaded.
   const [shown, setShown] = useState(doc);
   const [loaded, setLoaded] = useState<string | null>(null);

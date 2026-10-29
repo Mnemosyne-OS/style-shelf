@@ -1,0 +1,16 @@
+{
+  "id": "gradient-text",
+  "kind": "motion",
+  "title": {
+    "en": "Gradient text",
+    "fr": "Texte en dégradé",
+    "es": "Texto degradado"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "wow",
+    "title"
+  ]
+}

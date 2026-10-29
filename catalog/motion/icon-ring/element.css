@@ -1,0 +1,18 @@
+.ss-icon-ring {
+  display: inline-grid; place-items: center;
+  width: 48px; height: 48px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-panel);
+  color: var(--text-accent);
+}
+.ss-icon-ring svg { width: 24px; height: 24px; transform-origin: 50% 10%; }
+.ss-icon-ring:hover svg { animation: ss-icon-ring 900ms ease-in-out; }
+@keyframes ss-icon-ring {
+  10%, 30%, 50% { transform: rotate(14deg); }
+  20%, 40%, 60% { transform: rotate(-14deg); }
+  70%, 100% { transform: rotate(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-icon-ring:hover svg { animation: none; }
+}

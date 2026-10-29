@@ -1,0 +1,16 @@
+{
+  "id": "card-beam",
+  "kind": "card",
+  "title": {
+    "en": "Border beam",
+    "fr": "Bordure lumineuse",
+    "es": "Borde luminoso"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "wow",
+    "highlight"
+  ]
+}

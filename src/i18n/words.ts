@@ -15,11 +15,11 @@ const EN = {
   kinds: {
     label: 'Kinds', all: 'All', favorites: 'Favourites', style: 'Styles', button: 'Buttons', card: 'Cards', input: 'Fields',
     badge: 'Badges', alert: 'Alerts', tooltip: 'Tooltips', menu: 'Menus', table: 'Tables', placeholder: 'Loading skeletons',
-    motion: 'Motion', background: 'Backgrounds', icons: 'Icons',
+    motion: 'Motion', background: 'Backgrounds', icons: 'Icons', engine: 'Engines',
   },
   kindOne: {
     style: 'Style', button: 'Button', card: 'Card', input: 'Field', badge: 'Badge', alert: 'Alert', tooltip: 'Tooltip', menu: 'Menu', table: 'Table', placeholder: 'Loading skeleton',
-    motion: 'Motion', background: 'Background', icons: 'Icon pack',
+    motion: 'Motion', background: 'Background', icons: 'Icon pack', engine: 'Animation engine',
   },
   view: { label: 'Tile size', small: 'Overview', medium: 'Medium tiles', large: 'Large tiles' },
   tile: {
@@ -98,11 +98,11 @@ const FR: Dict = {
   kinds: {
     label: 'Catégories', all: 'Tout', favorites: 'Favoris', style: 'Styles', button: 'Boutons', card: 'Cartes', input: 'Champs',
     badge: 'Badges', alert: 'Alertes', tooltip: 'Infobulles', menu: 'Menus', table: 'Tableaux', placeholder: 'Squelettes de chargement',
-    motion: 'Motion', background: 'Fonds', icons: 'Icônes',
+    motion: 'Motion', background: 'Fonds', icons: 'Icônes', engine: 'Moteurs',
   },
   kindOne: {
     style: 'Style', button: 'Bouton', card: 'Carte', input: 'Champ', badge: 'Badge', alert: 'Alerte', tooltip: 'Infobulle', menu: 'Menu', table: 'Tableau', placeholder: 'Squelette de chargement',
-    motion: 'Motion', background: 'Fond', icons: "Pack d'icônes",
+    motion: 'Motion', background: 'Fond', icons: "Pack d'icônes", engine: "Moteur d'animation",
   },
   view: { label: 'Taille des tuiles', small: "Vue d'ensemble", medium: 'Tuiles moyennes', large: 'Grandes tuiles' },
   tile: {
@@ -179,11 +179,11 @@ const ES: Dict = {
   kinds: {
     label: 'Categorías', all: 'Todo', favorites: 'Favoritos', style: 'Estilos', button: 'Botones', card: 'Tarjetas', input: 'Campos',
     badge: 'Insignias', alert: 'Alertas', tooltip: 'Tooltips', menu: 'Menús', table: 'Tablas', placeholder: 'Esqueletos de carga',
-    motion: 'Motion', background: 'Fondos', icons: 'Iconos',
+    motion: 'Motion', background: 'Fondos', icons: 'Iconos', engine: 'Motores',
   },
   kindOne: {
     style: 'Estilo', button: 'Botón', card: 'Tarjeta', input: 'Campo', badge: 'Insignia', alert: 'Alerta', tooltip: 'Tooltip', menu: 'Menú', table: 'Tabla', placeholder: 'Esqueleto de carga',
-    motion: 'Motion', background: 'Fondo', icons: 'Pack de iconos',
+    motion: 'Motion', background: 'Fondo', icons: 'Pack de iconos', engine: 'Motor de animación',
   },
   view: { label: 'Tamaño de las fichas', small: 'Vista general', medium: 'Fichas medianas', large: 'Fichas grandes' },
   tile: {

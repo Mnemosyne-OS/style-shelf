@@ -13,7 +13,7 @@
  * @module preview/previewDoc
  */
 import type { SkinManifest } from '@mnemosyne_os/design-sdk';
-import type { CatalogEntry, IconPackEntry, StyleEntry } from '../catalog/types';
+import type { CatalogEntry, EngineEntry, IconPackEntry, StyleEntry } from '../catalog/types';
 
 /** The rules the preview adds around an entry; never shipped in a kit. */
 export const PREVIEW_FRAME_CSS = `
@@ -69,6 +69,15 @@ ${icons ? `<div class="ss-preview-icons">${icons}</div>` : ''}
 <code style="font:12px var(--font-mono);color:var(--text-muted)">${escapeHtml(pkg)}</code></div>`;
 }
 
+/** What an engine tile shows: its name, its package and what it is for (it runs JavaScript, so nothing animates here). */
+function engineScene(entry: EngineEntry, name: string, detail: string): string {
+  const pkg = entry.packages.react ?? entry.packages.any ?? Object.values(entry.packages)[0];
+  return `<div style="display:grid;gap:10px;justify-items:center;text-align:center;max-width:260px">
+<p style="margin:0;font-size:18px;font-weight:600;color:var(--text-primary)">${escapeHtml(name)}</p>
+<code style="padding:4px 10px;border:1px solid var(--border-subtle);border-radius:var(--radius-sm);font:12px var(--font-mono);color:var(--text-accent)">npm i ${escapeHtml(pkg)}</code>
+<p style="margin:0;font-size:13px;line-height:1.4;color:var(--text-secondary)">${escapeHtml(detail)}</p></div>`;
+}
+
 /**
  * The page of the style atelier: the style drawn on what a screen is made of
  * (a card, both kinds of button, a field, a tag, the three statuses), so each
@@ -97,13 +106,15 @@ ${PREVIEW_FRAME_CSS}</style></head><body>${body}</body></html>`;
 }
 
 /** The whole page of one preview frame: `entry` drawn in `style`. */
-export function previewDoc(style: StyleEntry, entry: CatalogEntry, name: string): string {
+export function previewDoc(style: StyleEntry, entry: CatalogEntry, name: string, detail = ''): string {
   let css = '';
   let body: string;
   if (entry.kind === 'style') {
     body = styleScene(entry, name);
   } else if (entry.kind === 'icons') {
     body = iconsScene(entry, name);
+  } else if (entry.kind === 'engine') {
+    body = engineScene(entry, name, detail);
   } else {
     css = entry.css;
     body = entry.html;

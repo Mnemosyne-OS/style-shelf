@@ -21,10 +21,15 @@ Open it in your browser: <https://mnemosyne-os.github.io/style-shelf/>
   Night and Glass. 6 more are made for Style Shelf. 35 come from the daisyUI
   themes and 10 from the Skeleton themes, converted to the same 30 design
   tokens.
-- 36 UI elements: buttons, cards, fields, badges, alerts, tooltips, menus,
-  tables, loading skeletons, animations and backgrounds.
+- 43 UI elements: buttons, cards, fields, badges, alerts, tooltips, menus,
+  tables, loading skeletons, animations and backgrounds. Some are made to
+  impress: a shimmer button, an elastic button with a real spring, a light
+  running around a card, a marquee, a gradient title.
 - 4 icon packs: Lucide, Tabler, Phosphor and Heroicons, shown with 8 sample
   icons each.
+- 5 animation engines: Motion, React Spring, use-gesture, Sonner and Vaul.
+  They run JavaScript, so the catalogue names them and the kit tells your
+  agent to install them, for springs, drag gestures, toasts and drawers.
 
 Every element is written on the tokens of the style. Choose another style and
 the whole catalogue redraws in it.

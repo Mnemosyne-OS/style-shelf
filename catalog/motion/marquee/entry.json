@@ -1,0 +1,17 @@
+{
+  "id": "marquee",
+  "kind": "motion",
+  "title": {
+    "en": "Marquee",
+    "fr": "Défilement",
+    "es": "Marquesina"
+  },
+  "license": "MIT",
+  "author": "Mnemosyne OS",
+  "tier": "free",
+  "tags": [
+    "wow",
+    "loop",
+    "logos"
+  ]
+}

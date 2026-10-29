@@ -1,0 +1,14 @@
+.ss-gradient-text {
+  margin: 0;
+  font: 800 32px/1.1 var(--font-ui);
+  background: linear-gradient(90deg, var(--accent), var(--status-warning), var(--accent-dim), var(--accent)) 0 0 / 300% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  animation: ss-gradient-text 6s linear infinite;
+}
+@keyframes ss-gradient-text {
+  to { background-position: 300% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-gradient-text { animation: none; }
+}

@@ -21,7 +21,11 @@ catalog/
   buttons/<id>/element.css      its CSS
   buttons/<id>/demo.html        the markup of its preview
   icons/<id>/entry.json         an icon pack, named by its npm packages
+  engines/<id>/entry.json       an animation engine, named by its npm packages
 ```
+
+An engine entry also carries `homepage` and `use`: what the engine is for, in
+English, French and Spanish.
 
 The element folders are `buttons`, `cards`, `inputs`, `badges`, `alerts`,
 `tooltips`, `menus`, `tables`, `placeholders`, `motion` and `backgrounds`.

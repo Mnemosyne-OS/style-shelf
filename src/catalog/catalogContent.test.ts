@@ -6,7 +6,7 @@ import { describe, expect, it } from 'vitest';
 import { contrastIssues, contrastRatio, parseHex } from '../lib/contrast';
 import { TOKEN_GROUPS } from '../studio/tokenGroups';
 import { shippedCatalog } from './loadCatalog';
-import { ENTRY_KINDS, type ElementEntry, type IconPackEntry, type StyleEntry } from './types';
+import { ENTRY_KINDS, type ElementEntry, type EngineEntry, type IconPackEntry, type StyleEntry } from './types';
 
 const catalog = shippedCatalog();
 const styles = catalog.entries.filter((e): e is StyleEntry => e.kind === 'style');
@@ -99,7 +99,17 @@ describe('the shipped catalogue', () => {
       }
     }
     for (const e of elements) {
-      for (const text of [e.css, e.html]) expect(text, e.id).not.toMatch(/border(-[a-z]+)?\s*:\s*var\(--border-(subtle|accent)\)/);
+      for (const text of [e.css, e.html]) expect(text, e.id).not.toMatch(/border(-(top|right|bottom|left|block|inline)(-(start|end))?)?\s*:\s*var\(--border-(subtle|accent)\)/);
+    }
+  });
+
+  it('names each animation engine by its packages, under an open licence, with what it is for in three languages', () => {
+    const engines = catalog.entries.filter((x): x is EngineEntry => x.kind === 'engine');
+    expect(engines.length).toBeGreaterThan(0);
+    for (const e of engines) {
+      expect(Object.keys(e.packages).length, e.id).toBeGreaterThan(0);
+      expect(e.license, e.id).toMatch(/^(MIT|ISC|Apache-2\.0)$/);
+      for (const lang of ['en', 'fr', 'es'] as const) expect(e.use[lang].trim(), `${e.id} ${lang}`).not.toBe('');
     }
   });
 

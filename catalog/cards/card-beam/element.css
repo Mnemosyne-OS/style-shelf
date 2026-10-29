@@ -1,0 +1,32 @@
+@property --ss-card-beam-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.ss-card-beam {
+  position: relative;
+  width: min(100%, 260px);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  font-family: var(--font-ui);
+  isolation: isolate;
+}
+.ss-card-beam::before {
+  content: ""; position: absolute; inset: 0; padding: 1px; z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from var(--ss-card-beam-angle), transparent 0 70%, var(--accent) 85%, transparent 100%), var(--border-subtle);
+  /* Only the 1px ring shows: the content box is cut out of the mask, so a translucent card ground stays clean. */
+  -webkit-mask: linear-gradient(currentColor 0 0) content-box, linear-gradient(currentColor 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(currentColor 0 0) content-box exclude, linear-gradient(currentColor 0 0);
+  animation: ss-card-beam 3s linear infinite;
+}
+.ss-card-beam__title { margin: 0 0 6px; font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.ss-card-beam__text { margin: 0; font-size: 13px; color: var(--text-secondary); }
+@keyframes ss-card-beam {
+  to { --ss-card-beam-angle: 360deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-card-beam::before { animation: none; }
+}

@@ -120,11 +120,16 @@ function readEntry(kind: EntryKind, id: string, files: Map<string, string>): Cat
   if (typeof raw === 'string') return raw;
   const base = readBase(raw, id, kind);
   if (typeof base === 'string') return base;
-  if (kind === 'icons') {
+  if (kind === 'icons' || kind === 'engine') {
     if (typeof raw.homepage !== 'string' || !raw.homepage.startsWith('https://')) return 'homepage: not an https address';
     const pkgs = raw.packages;
     if (!isRecord(pkgs) || Object.keys(pkgs).length === 0 || Object.values(pkgs).some((p) => typeof p !== 'string' || !p.trim())) {
       return 'packages: not a list of npm packages';
+    }
+    if (kind === 'engine') {
+      const use = readTitle(raw.use);
+      if (typeof use === 'string') return use.replace(/^title/, 'use');
+      return { ...base, id, kind, homepage: raw.homepage, packages: pkgs as Record<string, string>, use };
     }
     const samples = readSamples(files.get('samples.json'));
     if (typeof samples === 'string') return samples;

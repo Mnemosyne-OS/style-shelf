@@ -125,4 +125,14 @@ describe('parseCatalog', () => {
     expect(c.entries.map((e) => [e.id, e.github])).toEqual([['ok', 'octo-cat']]);
     expect(c.refused.map((r) => r.reason)).toEqual(['github "@octocat" is not a GitHub username', 'github "https://evil.example/x" is not a GitHub username']);
   });
+
+  it('reads an animation engine with its packages and what it is for, and refuses one that does not say', () => {
+    const engine = (extra: Record<string, unknown>) => element('motion', 'engine', { homepage: 'https://motion.dev', packages: { react: 'motion' }, ...extra });
+    const c = parseCatalog({
+      'catalog/engines/motion/entry.json': engine({ use: TITLE }),
+      'catalog/engines/mute/entry.json': engine({ id: 'mute' }).replace('"motion"', '"mute"'),
+    });
+    expect(c.entries).toMatchObject([{ id: 'motion', kind: 'engine', packages: { react: 'motion' }, use: TITLE }]);
+    expect(c.refused).toEqual([{ path: 'catalog/engines/mute', reason: 'use: missing' }]);
+  });
 });

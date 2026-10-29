@@ -1,0 +1,26 @@
+{
+  "id": "react-spring",
+  "kind": "engine",
+  "title": {
+    "en": "React Spring",
+    "fr": "React Spring",
+    "es": "React Spring"
+  },
+  "license": "MIT",
+  "author": "Poimandres (pmndrs)",
+  "github": "pmndrs",
+  "tier": "free",
+  "tags": [
+    "spring",
+    "physics"
+  ],
+  "homepage": "https://www.react-spring.dev",
+  "packages": {
+    "react": "@react-spring/web"
+  },
+  "use": {
+    "en": "Physics-based spring animations, smooth and fast.",
+    "fr": "Animations à ressort fondées sur la physique, fluides et rapides.",
+    "es": "Animaciones de muelle basadas en la física, fluidas y rápidas."
+  }
+}

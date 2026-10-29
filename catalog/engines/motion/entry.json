@@ -1,0 +1,28 @@
+{
+  "id": "motion",
+  "kind": "engine",
+  "title": {
+    "en": "Motion",
+    "fr": "Motion",
+    "es": "Motion"
+  },
+  "license": "MIT",
+  "author": "Motion (motiondivision)",
+  "github": "motiondivision",
+  "tier": "free",
+  "tags": [
+    "spring",
+    "gesture",
+    "layout"
+  ],
+  "homepage": "https://motion.dev",
+  "packages": {
+    "react": "motion",
+    "any": "motion"
+  },
+  "use": {
+    "en": "Springs, layout animations and gestures: the base of elastic buttons.",
+    "fr": "Ressorts, animations de mise en page et gestes : la base des boutons élastiques.",
+    "es": "Muelles, animaciones de diseño y gestos: la base de los botones elásticos."
+  }
+}

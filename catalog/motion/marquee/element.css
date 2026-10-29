@@ -1,0 +1,14 @@
+.ss-marquee {
+  width: min(100%, 300px); overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, var(--bg-void) 15%, var(--bg-void) 85%, transparent);
+  font: 600 13px/1 var(--font-mono);
+  color: var(--text-secondary);
+}
+.ss-marquee__track { display: flex; gap: var(--space-lg); width: max-content; animation: ss-marquee 12s linear infinite; }
+.ss-marquee__item { padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); background: var(--bg-panel); }
+@keyframes ss-marquee {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-marquee__track { animation: none; }
+}

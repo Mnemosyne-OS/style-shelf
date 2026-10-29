@@ -1,0 +1,26 @@
+{
+  "id": "vaul",
+  "kind": "engine",
+  "title": {
+    "en": "Vaul",
+    "fr": "Vaul",
+    "es": "Vaul"
+  },
+  "license": "MIT",
+  "author": "Emil Kowalski",
+  "github": "emilkowalski",
+  "tier": "free",
+  "tags": [
+    "drawer",
+    "drag"
+  ],
+  "homepage": "https://vaul.emilkowal.ski",
+  "packages": {
+    "react": "vaul"
+  },
+  "use": {
+    "en": "A drawer you drag, with natural physics.",
+    "fr": "Un tiroir qu'on fait glisser, avec une physique naturelle.",
+    "es": "Un cajón que se arrastra, con física natural."
+  }
+}

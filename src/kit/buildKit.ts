@@ -48,12 +48,24 @@ export interface KitIconPack {
   packages: Record<string, string>;
 }
 
+/** An animation engine the project installs (doc 186 §22): named, never copied. */
+export interface KitEngine {
+  id: string;
+  title: Title;
+  license: string;
+  author: string;
+  homepage: string;
+  packages: Record<string, string>;
+  use: Title;
+}
+
 export interface Kit {
   format: typeof KIT_FORMAT;
   createdAt: string;
   style: SkinManifest & { title: Title; license: string };
   elements: KitElement[];
   icons: KitIconPack[];
+  engines: KitEngine[];
   /** Every licence the kit carries, once each, sorted. */
   licenses: string[];
 }
@@ -73,22 +85,26 @@ export function buildKit(cart: Cart, catalog: Catalog, createdAt: string): KitBu
 
   const elements: KitElement[] = [];
   const icons: KitIconPack[] = [];
+  const engines: KitEngine[] = [];
   for (const id of cart.itemIds) {
     const e = byId.get(id);
     if (!e || e.kind === 'style') continue;
     if (e.kind === 'icons') {
       icons.push({ id: e.id, title: e.title, license: e.license, author: e.author, homepage: e.homepage, packages: e.packages });
+    } else if (e.kind === 'engine') {
+      engines.push({ id: e.id, title: e.title, license: e.license, author: e.author, homepage: e.homepage, packages: e.packages, use: e.use });
     } else {
       elements.push({ id: e.id, kind: e.kind, title: e.title, license: e.license, author: e.author, tier: e.tier, css: e.css, html: e.html });
     }
   }
-  const licenses = [...new Set([style.license, ...elements.map((e) => e.license), ...icons.map((i) => i.license)])].sort();
+  const licenses = [...new Set([style.license, ...elements.map((e) => e.license), ...icons.map((i) => i.license), ...engines.map((x) => x.license)])].sort();
   const kit: Kit = {
     format: KIT_FORMAT,
     createdAt,
     style: { ...style.manifest, title: style.title, license: style.license },
     elements,
     icons,
+    engines,
     licenses,
   };
   return {
@@ -142,7 +158,7 @@ export function briefMarkdown(kit: Kit, opts: { embedFiles: boolean }): string {
     `1. Load the style's variables once at the app root${opts.embedFiles ? ' (the `tokens.css` block below)' : ' (`tokens.css`)'}, or turn them into the project's own theme (Tailwind config, CSS-in-JS theme, design tokens). Keep their names.`,
     "2. Build each element below in the project's framework and component style. Read every colour, radius, spacing, font, shadow and duration from the variables: never hard-code a value the style defines.",
     '3. Keep each `prefers-reduced-motion` rule an element has.',
-    '4. Install the icon packs listed with the package for the project\'s framework.',
+    "4. Install the icon packs and the animation engines listed, with the package for the project's framework. Use each engine for what its line says: springs, gestures, toasts, drawers.",
     '5. Keep the licence notices.',
     "6. If the project is a Mnemosyne OS cartridge, call `onHostConfig()` from `@mnemosyne_os/cartridge-sdk` in its entry file. The app then takes the user's theme: `tokens.css` already reads the host's variables first. Border variables are colours: write `1px solid var(--border-subtle)`.",
     '',
@@ -157,7 +173,13 @@ export function briefMarkdown(kit: Kit, opts: { embedFiles: boolean }): string {
   for (const e of kit.elements) {
     out.push(`### ${e.title.en} (${e.kind}, \`${e.id}\`) · ${e.license}`, '', 'Markup of the preview:', '', '```html', e.html, '```', '');
   }
-  out.push('## Icon packs', '');
+  out.push('## Animation engines', '');
+  if (kit.engines.length === 0) out.push('None.');
+  for (const x of kit.engines) {
+    const pkgs = Object.entries(x.packages).map(([fw, p]) => `${fw}: \`${p}\``).join(', ');
+    out.push(`- **${x.title.en}** · ${x.license} · ${x.homepage} · ${pkgs}: ${x.use.en}`);
+  }
+  out.push('', '## Icon packs', '');
   if (kit.icons.length === 0) out.push('None.');
   for (const i of kit.icons) out.push(iconLine(i));
   out.push('', '## Licences', '', kit.licenses.join(', '), '');
