@@ -196,6 +196,23 @@ describe('lot 2: personal styles', () => {
     expect(link).toHaveTextContent('O@octocat');
   });
 
+  it('links « Mnemosyne OS » in the top bar to the product site, beside « Browser » and as the label inside the OS', async () => {
+    const openUrl = vi.fn(async (_url: string, _inHost: boolean): Promise<string | null> => null);
+    const { unmount } = render(<App catalog={catalog} detectDeps={standalone} mirror={noMirror} openUrl={openUrl} />);
+    let link = screen.getByRole('link', { name: 'Mnemosyne OS' });
+    expect(link).toHaveAttribute('href', 'https://mnemosyne-os.io');
+    expect(link.parentElement).toHaveTextContent('Browser · Mnemosyne OS');
+    fireEvent.click(link);
+    expect(openUrl).toHaveBeenCalledWith('https://mnemosyne-os.io', false);
+    unmount();
+    render(<App catalog={catalog} detectDeps={inMnemosyne} mirror={noMirror} openUrl={openUrl} />);
+    await act(async () => {});
+    link = screen.getByRole('link', { name: 'Mnemosyne OS' });
+    expect(link.parentElement).not.toHaveTextContent('Browser');
+    fireEvent.click(link);
+    expect(openUrl).toHaveBeenLastCalledWith('https://mnemosyne-os.io', true);
+  });
+
   it('never overwrites a local copy with the host one', async () => {
     localStorage.setItem(PERSONAL_KEY, JSON.stringify([{ id: 'my-local', name: 'Local', author: '', basedOn: 'hud-night', license: 'MIT', baseAuthor: 'm', updatedAt: 'x', tokens: TOKENS }]));
     const other = JSON.stringify([{ id: 'my-other', name: 'Other', author: '', basedOn: 'hud-night', license: 'MIT', baseAuthor: 'm', updatedAt: 'x', tokens: TOKENS }]);

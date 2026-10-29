@@ -11,7 +11,7 @@
 
 const EN = {
   appTitle: 'Style Shelf',
-  host: { standalone: 'Browser', foreign: 'Embedded', mnemosyne: 'Mnemosyne OS', pending: 'Looking for Mnemosyne' },
+  host: { standalone: 'Browser', foreign: 'Embedded', mnemosyne: 'Mnemosyne OS', pending: 'Looking for Mnemosyne', site: 'mnemosyne-os.io: the OS this app comes from' },
   kinds: {
     label: 'Kinds', all: 'All', favorites: 'Favourites', style: 'Styles', button: 'Buttons', card: 'Cards', input: 'Fields',
     badge: 'Badges', alert: 'Alerts', tooltip: 'Tooltips', menu: 'Menus', table: 'Tables', placeholder: 'Loading skeletons',
@@ -94,7 +94,7 @@ export type Dict = typeof EN;
 
 const FR: Dict = {
   appTitle: 'Style Shelf',
-  host: { standalone: 'Navigateur', foreign: 'Intégrée', mnemosyne: 'Mnemosyne OS', pending: 'Recherche de Mnemosyne' },
+  host: { standalone: 'Navigateur', foreign: 'Intégrée', mnemosyne: 'Mnemosyne OS', pending: 'Recherche de Mnemosyne', site: "mnemosyne-os.io : l'OS d'où vient cette app" },
   kinds: {
     label: 'Catégories', all: 'Tout', favorites: 'Favoris', style: 'Styles', button: 'Boutons', card: 'Cartes', input: 'Champs',
     badge: 'Badges', alert: 'Alertes', tooltip: 'Infobulles', menu: 'Menus', table: 'Tableaux', placeholder: 'Squelettes de chargement',
@@ -175,7 +175,7 @@ const FR: Dict = {
 
 const ES: Dict = {
   appTitle: 'Style Shelf',
-  host: { standalone: 'Navegador', foreign: 'Integrada', mnemosyne: 'Mnemosyne OS', pending: 'Buscando Mnemosyne' },
+  host: { standalone: 'Navegador', foreign: 'Integrada', mnemosyne: 'Mnemosyne OS', pending: 'Buscando Mnemosyne', site: 'mnemosyne-os.io: el OS del que viene esta app' },
   kinds: {
     label: 'Categorías', all: 'Todo', favorites: 'Favoritos', style: 'Estilos', button: 'Botones', card: 'Tarjetas', input: 'Campos',
     badge: 'Insignias', alert: 'Alertas', tooltip: 'Tooltips', menu: 'Menús', table: 'Tablas', placeholder: 'Esqueletos de carga',

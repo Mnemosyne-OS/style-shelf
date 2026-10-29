@@ -363,7 +363,7 @@ export function App({
     <div className="hud-root app">
       <header className="topbar">
         <span className="brand lab">{w.appTitle}</span>
-        <HostBadge state={host} w={w} />
+        <HostBadge state={host} w={w} onOpen={onOpenContribution} />
         {contribRepo && (
           <div className="segmented views" role="group" aria-label={w.contrib.views}>
             <button type="button" className={`icon-btn${view === 'catalog' ? ' chosen' : ''}`} aria-pressed={view === 'catalog'} onClick={() => setView('catalog')}>{w.contrib.catalogTab}</button>

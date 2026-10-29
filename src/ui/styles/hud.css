@@ -116,6 +116,8 @@ button.primary {
 .host-badge { display: inline-flex; align-items: center; gap: 6px; font: 11px/1 var(--h-mono); color: var(--h-muted); white-space: nowrap; }
 .host-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--h-muted); }
 .host-badge.mnemosyne .dot { background: var(--h-chosen); box-shadow: 0 0 10px var(--h-chosen); }
+.host-badge .os-link { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+.host-badge .os-link:hover, .host-badge .os-link:focus-visible { color: var(--h-holo); }
 .host-badge.pending .dot { background: var(--h-holo); animation: ss-search 1.2s ease-in-out infinite; }
 @keyframes ss-search { 50% { opacity: 0.25; } }
 .cart-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; }
