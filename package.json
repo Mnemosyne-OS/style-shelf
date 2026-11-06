@@ -1,6 +1,6 @@
 {
   "name": "@mnemosyne-plugins/style-shelf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Style Shelf: a catalogue of styles and UI elements (buttons, cards, fields, motion, backgrounds, icon packs) to put in a cart; the IDE picks up the kit and adapts the chosen style to the code (doc 186). Runs in any browser, and inside Mnemosyne OS writes the kit into the project.",

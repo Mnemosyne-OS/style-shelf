@@ -1,9 +1,9 @@
 {
   "name": "@mnemosyne-plugins/style-shelf",
   "displayName": "Style Shelf",
-  "version": "0.1.0",
-  "category": "Creation",
+  "version": "0.1.1",
   "icon": "icon.svg",
+  "category": "Creation",
   "license": "MIT",
   "repository": "https://github.com/Mnemosyne-OS/style-shelf",
   "description": "A catalogue of styles and UI elements to put in a cart: buttons, cards, fields, motion, backgrounds and icon packs, each drawn in the chosen style. The kit goes into the project and the IDE adapts the style to the code.",
